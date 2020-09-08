@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="envialianet" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <xs:element name="LoginWSService___Login">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="strCod" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strPass" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="LoginWSService___LoginResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="Result" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strNom" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodAge" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodCR" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strTipo" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strVersion" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strError" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strSesion" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strURLDetSegEnv" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="LoginWSService___Login2">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="strUsuario" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strPass" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="LoginWSService___Login2Response">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="Result" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCod" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strNom" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodAge" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodCR" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strTipo" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strVersion" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strError" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strSesion" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strURLDetSegEnv" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="LoginWSService___LoginCli">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodAge" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCod" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strPass" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="LoginWSService___LoginCliResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="Result" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strNom" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodCR" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strTipo" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strVersion" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strError" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strSesion" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strURLDetSegEnv" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="LoginWSService___LoginCli2">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodAge" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCliente" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strPass" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="LoginWSService___LoginCli2Response">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="Result" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodAgeOut" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCod" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strNom" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodCR" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strTipo" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strVersion" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strError" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strSesion" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strURLDetSegEnv" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="LoginWSService___LoginDep">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodAge" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodCli" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCod" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strPass" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="LoginWSService___LoginDepResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="Result" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strNom" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodCR" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strTipo" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strVersion" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strError" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strSesion" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strURLDetSegEnv" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="LoginWSService___LoginDep2">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodAge" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodCli" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strDepartamento" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strPass" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="LoginWSService___LoginDep2Response">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="Result" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodAgeOut" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodCliOut" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCod" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strNom" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodCR" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strTipo" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strVersion" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strError" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strSesion" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strURLDetSegEnv" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ROClientIDHeader">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="ID" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="LoginWSService___LoginRequest">
+    <wsdl:part name="parameters" element="tns:LoginWSService___Login" />
+  </wsdl:message>
+  <wsdl:message name="LoginWSService___LoginResponse">
+    <wsdl:part name="parameters" element="tns:LoginWSService___LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoginWSService___Login2Request">
+    <wsdl:part name="parameters" element="tns:LoginWSService___Login2" />
+  </wsdl:message>
+  <wsdl:message name="LoginWSService___Login2Response">
+    <wsdl:part name="parameters" element="tns:LoginWSService___Login2Response" />
+  </wsdl:message>
+  <wsdl:message name="LoginWSService___LoginCliRequest">
+    <wsdl:part name="parameters" element="tns:LoginWSService___LoginCli" />
+  </wsdl:message>
+  <wsdl:message name="LoginWSService___LoginCliResponse">
+    <wsdl:part name="parameters" element="tns:LoginWSService___LoginCliResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoginWSService___LoginCli2Request">
+    <wsdl:part name="parameters" element="tns:LoginWSService___LoginCli2" />
+  </wsdl:message>
+  <wsdl:message name="LoginWSService___LoginCli2Response">
+    <wsdl:part name="parameters" element="tns:LoginWSService___LoginCli2Response" />
+  </wsdl:message>
+  <wsdl:message name="LoginWSService___LoginDepRequest">
+    <wsdl:part name="parameters" element="tns:LoginWSService___LoginDep" />
+  </wsdl:message>
+  <wsdl:message name="LoginWSService___LoginDepResponse">
+    <wsdl:part name="parameters" element="tns:LoginWSService___LoginDepResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoginWSService___LoginDep2Request">
+    <wsdl:part name="parameters" element="tns:LoginWSService___LoginDep2" />
+  </wsdl:message>
+  <wsdl:message name="LoginWSService___LoginDep2Response">
+    <wsdl:part name="parameters" element="tns:LoginWSService___LoginDep2Response" />
+  </wsdl:message>
+  <wsdl:message name="ROClientIDHeaderMessage">
+    <wsdl:part name="ROClientID" element="tns:ROClientIDHeader" />
+  </wsdl:message>
+  <wsdl:portType name="LoginWSService">
+    <wsdl:operation name="Login">
+      <wsdl:input message="tns:LoginWSService___LoginRequest" />
+      <wsdl:output message="tns:LoginWSService___LoginResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="Login2">
+      <wsdl:input message="tns:LoginWSService___Login2Request" />
+      <wsdl:output message="tns:LoginWSService___Login2Response" />
+    </wsdl:operation>
+    <wsdl:operation name="LoginCli">
+      <wsdl:input message="tns:LoginWSService___LoginCliRequest" />
+      <wsdl:output message="tns:LoginWSService___LoginCliResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="LoginCli2">
+      <wsdl:input message="tns:LoginWSService___LoginCli2Request" />
+      <wsdl:output message="tns:LoginWSService___LoginCli2Response" />
+    </wsdl:operation>
+    <wsdl:operation name="LoginDep">
+      <wsdl:input message="tns:LoginWSService___LoginDepRequest" />
+      <wsdl:output message="tns:LoginWSService___LoginDepResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="LoginDep2">
+      <wsdl:input message="tns:LoginWSService___LoginDep2Request" />
+      <wsdl:output message="tns:LoginWSService___LoginDep2Response" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="LoginWSServiceBinding" type="tns:LoginWSService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="urn:envialianet-LoginWSService#Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login2">
+      <soap:operation soapAction="urn:envialianet-LoginWSService#Login2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoginCli">
+      <soap:operation soapAction="urn:envialianet-LoginWSService#LoginCli" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoginCli2">
+      <soap:operation soapAction="urn:envialianet-LoginWSService#LoginCli2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoginDep">
+      <soap:operation soapAction="urn:envialianet-LoginWSService#LoginDep" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoginDep2">
+      <soap:operation soapAction="urn:envialianet-LoginWSService#LoginDep2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="LoginWSService">
+    <wsdl:port name="LoginWSServicePort" binding="tns:LoginWSServiceBinding">
+      <soap:address location="http://ws.envialia.com/SOAP?service=WebServService" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

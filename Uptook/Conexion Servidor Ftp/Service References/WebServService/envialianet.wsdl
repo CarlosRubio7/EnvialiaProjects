@@ -1,0 +1,2358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="envialianet" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <xs:element name="WebServService___ConsEnvio">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodAgeCargo" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodAgeOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strAlbaran" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WebServService___ConsEnvioResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="strEnvio" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WebServService___ConsEnviosRef">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="strRef" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WebServService___ConsEnviosRefResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="strEnviosRef" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WebServService___ConsEnvEstados">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodAgeCargo" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodAgeOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strAlbaran" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WebServService___ConsEnvEstadosResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="strEnvEstados" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WebServService___ConsEnvEstadosRef">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="strRef" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WebServService___ConsEnvEstadosRefResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="strEnvEstadosRef" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WebServService___ConsRecogida">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="strCod" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WebServService___ConsRecogidaResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="strRecogida" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WebServService___ConsRecogidasRef">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="strRef" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WebServService___ConsRecogidasRefResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="strRecogidasRef" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WebServService___ConsRecEstados">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodRec" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WebServService___ConsRecEstadosResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="strRecEstados" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WebServService___ConsRecEstadosRef">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="strRef" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WebServService___ConsRecEstadosRefResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="strRecEstadosRef" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WebServService___GrabaEnvio">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodAgeCargo" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodAgeOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strAlbaran" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dtFecha" type="xs:dateTime" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodAgeDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodTipoServ" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodCli" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodCliDep" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strNomOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strTipoViaOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strDirOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strNumOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strPisoOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strPobOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCPOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodProOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strTlfOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strNomDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strTipoViaDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strDirDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strNumDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strPisoDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strPobDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCPDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodProDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strTlfDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="intDoc" type="xs:int" />
+            <xs:element minOccurs="1" maxOccurs="1" name="intPaq" type="xs:int" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dPesoOri" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dAltoOri" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dAnchoOri" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dLargoOri" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dPesoVolpes" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dAltoVolpes" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dAnchoVolpes" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dLargoVolpes" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dReembolso" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dReembolsoAnterior" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dValor" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dAnticipo" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dAnticipoAnterior" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dCobCli" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dCobCliAnterior" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dPorteDebAnterior" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strObs" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dtFecEntr" type="xs:dateTime" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boSabado" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boRetorno" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boGestOri" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boGestDes" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boAnulado" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boAcuse" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boTecleDes" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodRep" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strRef" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strAsociadoRet" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strTipoAsoc" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodSalRuta" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dBaseImp" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dImpuesto" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boValidado" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boCliente" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boPorteDebCli" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boInsert" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strTipoEnvOld" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strPersContacto" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boDesSMS" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strDesMoviles" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WebServService___GrabaEnvioResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="strAlbaranOut" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dPesoVolpesOut" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dAltoVolpesOut" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dAnchoVolpesOut" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dLargoVolpesOut" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dtFecEntrOut" type="xs:dateTime" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strTipoEnvOut" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dtFecHoraAltaOut" type="xs:dateTime" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dKmsManOut" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boTecleDesOut" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodAgeDesOut" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodProDesOut" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dPorteDebOut" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strGuidOut" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WebServService___GrabaEnvio2">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodAgeCargo" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodAgeOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dtFecha" type="xs:dateTime" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodAgeDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodTipoServ" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodCli" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodCliDep" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strNomOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strTipoViaOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strDirOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strNumOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strPisoOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strPobOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCPOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodProOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strTlfOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strNomDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strTipoViaDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strDirDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strNumDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strPisoDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strPobDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCPDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodProDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strTlfDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="intDoc" type="xs:int" />
+            <xs:element minOccurs="1" maxOccurs="1" name="intPaq" type="xs:int" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dPesoOri" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dAltoOri" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dAnchoOri" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dLargoOri" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dReembolso" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dValor" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dAnticipo" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dCobCli" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strObs" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boSabado" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boRetorno" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boGestOri" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boGestDes" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boAnulado" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boAcuse" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodRep" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strRef" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodSalRuta" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dBaseImp" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dImpuesto" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boPorteDebCli" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strPersContacto" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boDesSMS" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strDesMoviles" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodPais" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WebServService___GrabaEnvio2Response">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="strAlbaranOut" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodTipoServOut" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dPesoVolpesOut" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dAltoVolpesOut" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dAnchoVolpesOut" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dLargoVolpesOut" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dtFecEntrOut" type="xs:dateTime" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strTipoEnvOut" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dtFecHoraAltaOut" type="xs:dateTime" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dKmsManOut" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boTecleDesOut" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodAgeDesOut" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodProDesOut" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dPorteDebOut" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodPaisOut" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boRetornoOut" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strGuidOut" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WebServService___GrabaEnvio3">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodAgeCargo" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodAgeOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strAlbaran" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dtFecha" type="xs:dateTime" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodAgeDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodTipoServ" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodCli" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodCliDep" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strNomOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strTipoViaOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strDirOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strNumOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strPisoOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strPobOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCPOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodProOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strTlfOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strNomDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strTipoViaDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strDirDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strNumDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strPisoDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strPobDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCPDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodProDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strTlfDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="intDoc" type="xs:int" />
+            <xs:element minOccurs="1" maxOccurs="1" name="intPaq" type="xs:int" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dPesoOri" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dAltoOri" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dAnchoOri" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dLargoOri" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dReembolso" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dValor" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dAnticipo" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dCobCli" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strObs" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boSabado" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boRetorno" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boGestOri" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boGestDes" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boAnulado" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boAcuse" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodRep" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strRef" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodSalRuta" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dBaseImp" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dImpuesto" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boPorteDebCli" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strPersContacto" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boDesSMS" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strDesMoviles" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodPais" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boInsert" type="xs:boolean" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WebServService___GrabaEnvio3Response">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="strAlbaranOut" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodTipoServOut" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dPesoVolpesOut" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dAltoVolpesOut" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dAnchoVolpesOut" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dLargoVolpesOut" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dtFecEntrOut" type="xs:dateTime" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strTipoEnvOut" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dtFecHoraAltaOut" type="xs:dateTime" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dKmsManOut" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boTecleDesOut" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodAgeDesOut" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodProDesOut" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dPorteDebOut" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodPaisOut" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boRetornoOut" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strGuidOut" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WebServService___GrabaEnvio4">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodAgeCargo" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodAgeOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strAlbaran" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dtFecha" type="xs:dateTime" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodAgeDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodTipoServ" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodCli" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodCliDep" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strNomOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strTipoViaOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strDirOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strNumOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strPisoOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strPobOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCPOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodProOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strTlfOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strNomDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strTipoViaDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strDirDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strNumDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strPisoDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strPobDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCPDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodProDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strTlfDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="intDoc" type="xs:int" />
+            <xs:element minOccurs="1" maxOccurs="1" name="intPaq" type="xs:int" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dPesoOri" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dAltoOri" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dAnchoOri" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dLargoOri" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dReembolso" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dValor" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dAnticipo" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dCobCli" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strObs" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boSabado" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boRetorno" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boGestOri" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boGestDes" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boAnulado" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boAcuse" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodRep" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strRef" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodSalRuta" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dBaseImp" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dImpuesto" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boPorteDebCli" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strPersContacto" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodPais" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strDesMoviles" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strDesDirEmails" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boInsert" type="xs:boolean" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WebServService___GrabaEnvio4Response">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="strAlbaranOut" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodTipoServOut" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dPesoVolpesOut" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dAltoVolpesOut" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dAnchoVolpesOut" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dLargoVolpesOut" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dtFecEntrOut" type="xs:dateTime" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strTipoEnvOut" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dtFecHoraAltaOut" type="xs:dateTime" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dKmsManOut" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boTecleDesOut" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodAgeDesOut" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodProDesOut" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dPorteDebOut" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodPaisOut" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boRetornoOut" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strGuidOut" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WebServService___GrabaEnvio5">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodAgeCargo" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodAgeOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strAlbaran" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dtFecha" type="xs:dateTime" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodAgeDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodTipoServ" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodCli" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodCliDep" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strNomOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strTipoViaOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strDirOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strNumOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strPisoOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strPobOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCPOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodProOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strTlfOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strNomDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strTipoViaDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strDirDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strNumDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strPisoDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strPobDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCPDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodProDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strTlfDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="intDoc" type="xs:int" />
+            <xs:element minOccurs="1" maxOccurs="1" name="intPaq" type="xs:int" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dPesoOri" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dAltoOri" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dAnchoOri" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dLargoOri" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dReembolso" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dValor" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dAnticipo" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dCobCli" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strObs" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boSabado" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boRetorno" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boGestOri" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boGestDes" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boAnulado" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boAcuse" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodRep" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strRef" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodSalRuta" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dBaseImp" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dImpuesto" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boPorteDebCli" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strPersContacto" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodPais" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strDesMoviles" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strDesDirEmails" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strFranjaHoraria" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dtHoraEnvIni" type="xs:dateTime" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dtHoraEnvFin" type="xs:dateTime" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boInsert" type="xs:boolean" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WebServService___GrabaEnvio5Response">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="strAlbaranOut" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodTipoServOut" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dPesoVolpesOut" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dAltoVolpesOut" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dAnchoVolpesOut" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dLargoVolpesOut" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dtFecEntrOut" type="xs:dateTime" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strTipoEnvOut" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dtFecHoraAltaOut" type="xs:dateTime" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dKmsManOut" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boTecleDesOut" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodAgeDesOut" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodProDesOut" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dPorteDebOut" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodPaisOut" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boRetornoOut" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strGuidOut" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WebServService___GrabaEnvio6">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodAgeCargo" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodAgeOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strAlbaran" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dtFecha" type="xs:dateTime" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodAgeDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodTipoServ" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodCli" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodCliDep" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strNomOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strTipoviaOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strDirOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strNumOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strPisoOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strPobOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCPOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodProOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strTlfOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strNomDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strTipoViaDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strDirDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strNumDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strPisoDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strPobDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCPDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodProDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strTlfDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="intDoc" type="xs:int" />
+            <xs:element minOccurs="1" maxOccurs="1" name="intPaq" type="xs:int" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dPesoOri" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dAltoOri" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dAnchoOri" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dLargoOri" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dReembolso" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dValor" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dAnticipo" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dCobCli" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strObs" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boSabado" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boRetorno" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boGestOri" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boGestDes" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boAnulado" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boAcuse" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodRep" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strRef" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodSalRuta" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dBaseImp" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dImpuesto" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boPorteDebCli" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strPersContacto" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodPais" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strDesMoviles" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strDesDirEmails" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strFranjaHoraria" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dtHoraEnvIni" type="xs:dateTime" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dtHoraEnvFin" type="xs:dateTime" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boInsert" type="xs:boolean" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WebServService___GrabaEnvio6Response">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="strAlbaranOut" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodTipoServOut" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dPesoVolpesOut" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dAltoVolpesOut" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dAnchoVolpesOut" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dLargoVolpesOut" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dtFecEntrOut" type="xs:dateTime" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strTipoEnvOut" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dtFecHoraAltaOut" type="xs:dateTime" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dKmsManOut" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boTecleDesOut" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodAgeOriOut" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodAgeDesOut" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodProOriOut" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodProDesOut" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dPorteDebOut" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodPaisOut" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boRetornoOut" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strGuidOut" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WebServService___GrabaEnvio7">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodAgeCargo" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodAgeOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strAlbaran" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dtFecha" type="xs:dateTime" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodAgeDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodTipoServ" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodCli" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodCliDep" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strNomOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strTipoViaOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strDirOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strNumOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strPisoOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strPobOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCPOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodProOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strTlfOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strNomDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strTipoViaDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strDirDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strNumDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strPisoDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strPobDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCPDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodProDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strTlfDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="intDoc" type="xs:int" />
+            <xs:element minOccurs="1" maxOccurs="1" name="intPaq" type="xs:int" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dPesoOri" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dAltoOri" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dAnchoOri" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dLargoOri" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dReembolso" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dValor" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dAnticipo" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dCobCli" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strObs" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boSabado" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boRetorno" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boGestOri" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boGestDes" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boAnulado" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boAcuse" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strRef" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodSalRuta" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dBaseImp" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dImpuesto" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boPorteDebCli" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strPersContacto" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodPais" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strDesMoviles" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strDesDirEmails" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strFranjaHoraria" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dtHoraEnvIni" type="xs:dateTime" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dtHoraEnvFin" type="xs:dateTime" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boInsert" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCampo1" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCampo2" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCampo3" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCampo4" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boCampo5" type="xs:boolean" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WebServService___GrabaEnvio7Response">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="strAlbaranOut" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodTipoServOut" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dPesoVolpesOut" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dAltoVolpesOut" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dAnchoVolpesOut" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dLargoVolpesOut" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dtFecEntrOut" type="xs:dateTime" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strTipoEnvOut" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dtFecHoraAltaOut" type="xs:dateTime" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dKmsManOut" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boTecleDesOut" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodAgeOriOut" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodAgeDesOut" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodProOriOut" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodProDesOut" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dPorteDebOut" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodPaisOut" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boRetornoOut" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strGuidOut" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WebServService___GrabaRecogida">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="strCod" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodAgeOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodAgeSol" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodAgeDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodAgeCargo" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dtFecRec" type="xs:dateTime" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dtHoraRecIni" type="xs:dateTime" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dtHoraRecIniTarde" type="xs:dateTime" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dtHoraRecFin" type="xs:dateTime" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dtHoraRecFinTarde" type="xs:dateTime" />
+            <xs:element minOccurs="1" maxOccurs="1" name="intBul" type="xs:int" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dPeso" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dValor" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dAnticipo" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodVeh" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strNomOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strTipoViaOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strDirOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strNumOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strPisoOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strPobOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCPOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strTlfOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodProOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strNomDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strTipoViaDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strDirDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strNumDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strPisoDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strPobDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCPDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strTlfDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodProDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strObs" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodCli" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodCliDep" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strPersContacto" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boAutKM" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodTipoServ" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boSabado" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodRep" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodEnv" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strRef" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strTipoRecOld" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strObsDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dReembolso" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dCobCli" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dImpuesto" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dBaseImp" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boAcuse" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boRetorno" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boGestOri" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boGestDes" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodPais" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WebServService___GrabaRecogidaResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodOut" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strTipoRecOut" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dtFecHoraAltaOut" type="xs:dateTime" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodAgeOriOut" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodProOriOut" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodAgeDesOut" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodProDesOut" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="fPorteDebOut" type="xs:double" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WebServService___GrabaRecogida2">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="strCod" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodAgeOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodAgeDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodAgeCargo" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dtFecRec" type="xs:dateTime" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dtHoraRecIni" type="xs:dateTime" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dtHoraRecIniTarde" type="xs:dateTime" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dtHoraRecFin" type="xs:dateTime" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dtHoraRecFinTarde" type="xs:dateTime" />
+            <xs:element minOccurs="1" maxOccurs="1" name="intBul" type="xs:int" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dPeso" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dValor" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dAnticipo" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodVeh" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strNomOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strTipoViaOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strDirOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strNumOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strPisoOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strPobOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCPOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strTlfOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodProOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strNomDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strTipoViaDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strDirDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strNumDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strPisoDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strPobDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCPDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strTlfDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodProDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strObs" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodCli" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodCliDep" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strPersContacto" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boAutKM" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodTipoServ" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boSabado" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodRep" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodEnv" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strRef" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strTipoRecOld" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strObsDes" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dReembolso" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dCobCli" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dImpuesto" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dBaseImp" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boAcuse" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boRetorno" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boGestOri" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boGestDes" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodPais" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boRemSMS" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boRemEmail" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strRemMoviles" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strRemDirEmails" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boRemAlta" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boRemInci" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boRemResInci" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boRemRep" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boDesSMS" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boDesEmail" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strDesMoviles" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strDesDirEmails" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boDesAlta" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boDesFin" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boDesInci" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boDesResInci" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boDesRep" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCampo1" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCampo2" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCampo3" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCampo4" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boCampo5" type="xs:boolean" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WebServService___GrabaRecogida2Response">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodOut" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strTipoRecOut" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dtFecHoraAltaOut" type="xs:dateTime" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodAgeOriOut" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodProOriOut" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodAgeDesOut" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodProDesOut" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="fPorteDebOut" type="xs:double" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WebServService___InfEnvios">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="dtFecha" type="xs:dateTime" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WebServService___InfEnviosResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="strInfEnvios" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WebServService___ConsEtiquetaEnvio">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="strAlbaran" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WebServService___ConsEtiquetaEnvioResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="strEtiqueta" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WebServService___ConsEtiquetaEnvio2">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodAgeOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strAlbaran" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WebServService___ConsEtiquetaEnvio2Response">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="strEtiqueta" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WebServService___ConsEtiquetaEnvio3">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodAgeOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strAlbaran" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WebServService___ConsEtiquetaEnvio3Response">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="strEtiqueta" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WebServService___ConsEtiquetaEnvio4">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodAgeOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strAlbaran" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boPaginaA4" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="intNumEtiqImpresasA4" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WebServService___ConsEtiquetaEnvio4Response">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="strEtiqueta" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WebServService___ConsEtiquetaEnvio5">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodAgeOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strAlbaran" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strBulto" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boPaginaA4" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="intNumEtiqImpresasA4" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WebServService___ConsEtiquetaEnvio5Response">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="strEtiqueta" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WebServService___ConsEnvIncidencias">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodAgeCargo" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodAgeOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strAlbaran" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WebServService___ConsEnvIncidenciasResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="strEnvIncidencias" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WebServService___ConsEnvIncidenciasRef">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="strRef" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WebServService___ConsEnvIncidenciasRefResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="strEnvIncidenciasRef" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WebServService___ConsRecIncidencias">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodRec" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WebServService___ConsRecIncidenciasResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="strRecIncidencias" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WebServService___ConsRecIncidenciasRef">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="strRef" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WebServService___ConsRecIncidenciasRefResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="strRecIncidenciasRef" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WebServService___ConsEnvPODDig">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodAgeCargo" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodAgeOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strAlbaran" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WebServService___ConsEnvPODDigResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="strURLEnvPODDig" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WebServService___ConsEnvPODDig2">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodAgeCargo" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodAgeOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strAlbaran" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WebServService___ConsEnvPODDig2Response">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="strURLEnvPODDig" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boDigitalizado" type="xs:boolean" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WebServService___ConsEnvPODDigRef">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="strRef" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WebServService___ConsEnvPODDigRefResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="strURLEnvPODDigRef" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WebServService___BorraEnvio">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodAgeCargo" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodAgeOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strAlbaran" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WebServService___BorraEnvioResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="intCodError" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WebServService___ConsEtiquetaEnvioMasiva">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="strEnvios" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boPaginaA4" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="intNumEtiqImpresasA4" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WebServService___ConsEtiquetaEnvioMasivaResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="strEtiqueta" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WebServService___InfEnvEstPOD">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="dtFecha" type="xs:dateTime" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WebServService___InfEnvEstPODResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="strInfEnvEstPOD" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WebServService___GrabaRecDestino">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodRec" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strNom" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strTipoVia" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strDir" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strNum" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strPiso" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strPob" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCP" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strTlf" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodPro" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodAge" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strObs" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodTipoServ" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strRef" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="intBul" type="xs:int" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dPeso" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dReembolso" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dValor" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dCobCli" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boAcuse" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boRetorno" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boGestDes" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boSabado" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodPais" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boDesSMS" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boDesEmail" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strDesMoviles" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strDesDirEmails" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boDesAlta" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boDesFin" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boDesInci" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boDesResInci" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boDesRep" type="xs:boolean" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WebServService___GrabaRecDestinoResponse">
+        <xs:complexType />
+      </xs:element>
+      <xs:element name="WebServService___GrabaRecDestino2">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodRec" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strNom" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strTipoVia" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strDir" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strNum" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strPiso" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strPob" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCP" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strTlf" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodPro" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodAge" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strObs" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodTipoServ" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strRef" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="intBul" type="xs:int" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dPeso" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dReembolso" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dValor" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dCobCli" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boAcuse" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boRetorno" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boGestDes" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boSabado" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodPais" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boDesSMS" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boDesEmail" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strDesMoviles" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strDesDirEmails" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boDesAlta" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boDesFin" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boDesInci" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boDesResInci" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boDesRep" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dBaseImp" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dImpuesto" type="xs:double" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WebServService___GrabaRecDestino2Response">
+        <xs:complexType />
+      </xs:element>
+      <xs:element name="WebServService___GrabaRecDestino3">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodRec" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strNom" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strTipoVia" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strDir" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strNum" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strPiso" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strPob" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCP" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strTlf" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodPro" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodAge" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strObs" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodTipoServ" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strRef" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="intBul" type="xs:int" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dPeso" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dReembolso" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dValor" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dCobCli" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boAcuse" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boRetorno" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boGestDes" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boSabado" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodPais" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boDesSMS" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boDesEmail" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strDesMoviles" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strDesDirEmails" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boDesAlta" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boDesFin" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boDesInci" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boDesResInci" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boDesRep" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dBaseImp" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dImpuesto" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCampo1" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCampo2" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCampo3" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCampo4" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boCampo5" type="xs:boolean" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WebServService___GrabaRecDestino3Response">
+        <xs:complexType />
+      </xs:element>
+      <xs:element name="WebServService___GrabaRecogeme">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="strCod" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodAgeCargo" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodCli" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodCliDep" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodAgeOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dtFecRec" type="xs:dateTime" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dtHoraRecIni" type="xs:dateTime" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dtHoraRecFin" type="xs:dateTime" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dtHoraRecIniTarde" type="xs:dateTime" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dtHoraRecFinTarde" type="xs:dateTime" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strNomOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strTipoViaOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strDirOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strNumOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strPisoOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strPobOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCPOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strTlfOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodProOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="intBul" type="xs:int" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dPeso" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="intEnvios" type="xs:int" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strObs" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strRef" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strPersContacto" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodVeh" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dAnticipo" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dValor" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dReembolso" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dCobCli" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dImpuesto" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dBaseImp" type="xs:double" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boAutKm" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boSabado" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boAcuse" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boRetorno" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boGestOri" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boGestDes" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCampo1" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCampo2" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCampo3" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCampo4" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boCampo5" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boRemSMS" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boRemEmail" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strRemMoviles" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strRemDirEmails" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boRemAlta" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boRemInci" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boRemResInci" type="xs:boolean" />
+            <xs:element minOccurs="1" maxOccurs="1" name="boRemRep" type="xs:boolean" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WebServService___GrabaRecogemeResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodOut" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strTipoRecOut" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dtFecHoraAltaOut" type="xs:dateTime" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodAgeOriOut" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodProOriOut" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dPorteDebOut" type="xs:double" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WebServService___ConsEnvEstIncRef">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="strRef" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WebServService___ConsEnvEstIncRefResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="strEnvEstIncRef" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WebServService___ConsRecEstIncRef">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="strRef" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WebServService___ConsRecEstIncRefResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="strRecEstIncRef" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WebServService___ConsEnvEstInc">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodAgeCargo" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strCodAgeOri" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="strAlbaran" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WebServService___ConsEnvEstIncResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="strEnvEstInc" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WebServService___ConsRecEstInc">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="strRecogida" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WebServService___ConsRecEstIncResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="strRecEstInc" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WebServService___ConsEnvEstIncCambioEstado">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="dtFecHoraEstadoInicio" type="xs:dateTime" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dtFecHoraEstadoFin" type="xs:dateTime" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WebServService___ConsEnvEstIncCambioEstadoResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="strEnvEstIncCambioEstado" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WebServService___ConsRecEstIncCambioEstado">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="dtFecHoraEstadoInicio" type="xs:dateTime" />
+            <xs:element minOccurs="1" maxOccurs="1" name="dtFecHoraEstadoFin" type="xs:dateTime" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WebServService___ConsRecEstIncCambioEstadoResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="strRecEstIncCambioEstado" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ROClientIDHeader">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="ID" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="WebServService___ConsEnvioRequest">
+    <wsdl:part name="parameters" element="tns:WebServService___ConsEnvio" />
+  </wsdl:message>
+  <wsdl:message name="WebServService___ConsEnvioResponse">
+    <wsdl:part name="parameters" element="tns:WebServService___ConsEnvioResponse" />
+  </wsdl:message>
+  <wsdl:message name="WebServService___ConsEnviosRefRequest">
+    <wsdl:part name="parameters" element="tns:WebServService___ConsEnviosRef" />
+  </wsdl:message>
+  <wsdl:message name="WebServService___ConsEnviosRefResponse">
+    <wsdl:part name="parameters" element="tns:WebServService___ConsEnviosRefResponse" />
+  </wsdl:message>
+  <wsdl:message name="WebServService___ConsEnvEstadosRequest">
+    <wsdl:part name="parameters" element="tns:WebServService___ConsEnvEstados" />
+  </wsdl:message>
+  <wsdl:message name="WebServService___ConsEnvEstadosResponse">
+    <wsdl:part name="parameters" element="tns:WebServService___ConsEnvEstadosResponse" />
+  </wsdl:message>
+  <wsdl:message name="WebServService___ConsEnvEstadosRefRequest">
+    <wsdl:part name="parameters" element="tns:WebServService___ConsEnvEstadosRef" />
+  </wsdl:message>
+  <wsdl:message name="WebServService___ConsEnvEstadosRefResponse">
+    <wsdl:part name="parameters" element="tns:WebServService___ConsEnvEstadosRefResponse" />
+  </wsdl:message>
+  <wsdl:message name="WebServService___ConsRecogidaRequest">
+    <wsdl:part name="parameters" element="tns:WebServService___ConsRecogida" />
+  </wsdl:message>
+  <wsdl:message name="WebServService___ConsRecogidaResponse">
+    <wsdl:part name="parameters" element="tns:WebServService___ConsRecogidaResponse" />
+  </wsdl:message>
+  <wsdl:message name="WebServService___ConsRecogidasRefRequest">
+    <wsdl:part name="parameters" element="tns:WebServService___ConsRecogidasRef" />
+  </wsdl:message>
+  <wsdl:message name="WebServService___ConsRecogidasRefResponse">
+    <wsdl:part name="parameters" element="tns:WebServService___ConsRecogidasRefResponse" />
+  </wsdl:message>
+  <wsdl:message name="WebServService___ConsRecEstadosRequest">
+    <wsdl:part name="parameters" element="tns:WebServService___ConsRecEstados" />
+  </wsdl:message>
+  <wsdl:message name="WebServService___ConsRecEstadosResponse">
+    <wsdl:part name="parameters" element="tns:WebServService___ConsRecEstadosResponse" />
+  </wsdl:message>
+  <wsdl:message name="WebServService___ConsRecEstadosRefRequest">
+    <wsdl:part name="parameters" element="tns:WebServService___ConsRecEstadosRef" />
+  </wsdl:message>
+  <wsdl:message name="WebServService___ConsRecEstadosRefResponse">
+    <wsdl:part name="parameters" element="tns:WebServService___ConsRecEstadosRefResponse" />
+  </wsdl:message>
+  <wsdl:message name="WebServService___GrabaEnvioRequest">
+    <wsdl:part name="parameters" element="tns:WebServService___GrabaEnvio" />
+  </wsdl:message>
+  <wsdl:message name="WebServService___GrabaEnvioResponse">
+    <wsdl:part name="parameters" element="tns:WebServService___GrabaEnvioResponse" />
+  </wsdl:message>
+  <wsdl:message name="WebServService___GrabaEnvio2Request">
+    <wsdl:part name="parameters" element="tns:WebServService___GrabaEnvio2" />
+  </wsdl:message>
+  <wsdl:message name="WebServService___GrabaEnvio2Response">
+    <wsdl:part name="parameters" element="tns:WebServService___GrabaEnvio2Response" />
+  </wsdl:message>
+  <wsdl:message name="WebServService___GrabaEnvio3Request">
+    <wsdl:part name="parameters" element="tns:WebServService___GrabaEnvio3" />
+  </wsdl:message>
+  <wsdl:message name="WebServService___GrabaEnvio3Response">
+    <wsdl:part name="parameters" element="tns:WebServService___GrabaEnvio3Response" />
+  </wsdl:message>
+  <wsdl:message name="WebServService___GrabaEnvio4Request">
+    <wsdl:part name="parameters" element="tns:WebServService___GrabaEnvio4" />
+  </wsdl:message>
+  <wsdl:message name="WebServService___GrabaEnvio4Response">
+    <wsdl:part name="parameters" element="tns:WebServService___GrabaEnvio4Response" />
+  </wsdl:message>
+  <wsdl:message name="WebServService___GrabaEnvio5Request">
+    <wsdl:part name="parameters" element="tns:WebServService___GrabaEnvio5" />
+  </wsdl:message>
+  <wsdl:message name="WebServService___GrabaEnvio5Response">
+    <wsdl:part name="parameters" element="tns:WebServService___GrabaEnvio5Response" />
+  </wsdl:message>
+  <wsdl:message name="WebServService___GrabaEnvio6Request">
+    <wsdl:part name="parameters" element="tns:WebServService___GrabaEnvio6" />
+  </wsdl:message>
+  <wsdl:message name="WebServService___GrabaEnvio6Response">
+    <wsdl:part name="parameters" element="tns:WebServService___GrabaEnvio6Response" />
+  </wsdl:message>
+  <wsdl:message name="WebServService___GrabaEnvio7Request">
+    <wsdl:part name="parameters" element="tns:WebServService___GrabaEnvio7" />
+  </wsdl:message>
+  <wsdl:message name="WebServService___GrabaEnvio7Response">
+    <wsdl:part name="parameters" element="tns:WebServService___GrabaEnvio7Response" />
+  </wsdl:message>
+  <wsdl:message name="WebServService___GrabaRecogidaRequest">
+    <wsdl:part name="parameters" element="tns:WebServService___GrabaRecogida" />
+  </wsdl:message>
+  <wsdl:message name="WebServService___GrabaRecogidaResponse">
+    <wsdl:part name="parameters" element="tns:WebServService___GrabaRecogidaResponse" />
+  </wsdl:message>
+  <wsdl:message name="WebServService___GrabaRecogida2Request">
+    <wsdl:part name="parameters" element="tns:WebServService___GrabaRecogida2" />
+  </wsdl:message>
+  <wsdl:message name="WebServService___GrabaRecogida2Response">
+    <wsdl:part name="parameters" element="tns:WebServService___GrabaRecogida2Response" />
+  </wsdl:message>
+  <wsdl:message name="WebServService___InfEnviosRequest">
+    <wsdl:part name="parameters" element="tns:WebServService___InfEnvios" />
+  </wsdl:message>
+  <wsdl:message name="WebServService___InfEnviosResponse">
+    <wsdl:part name="parameters" element="tns:WebServService___InfEnviosResponse" />
+  </wsdl:message>
+  <wsdl:message name="WebServService___ConsEtiquetaEnvioRequest">
+    <wsdl:part name="parameters" element="tns:WebServService___ConsEtiquetaEnvio" />
+  </wsdl:message>
+  <wsdl:message name="WebServService___ConsEtiquetaEnvioResponse">
+    <wsdl:part name="parameters" element="tns:WebServService___ConsEtiquetaEnvioResponse" />
+  </wsdl:message>
+  <wsdl:message name="WebServService___ConsEtiquetaEnvio2Request">
+    <wsdl:part name="parameters" element="tns:WebServService___ConsEtiquetaEnvio2" />
+  </wsdl:message>
+  <wsdl:message name="WebServService___ConsEtiquetaEnvio2Response">
+    <wsdl:part name="parameters" element="tns:WebServService___ConsEtiquetaEnvio2Response" />
+  </wsdl:message>
+  <wsdl:message name="WebServService___ConsEtiquetaEnvio3Request">
+    <wsdl:part name="parameters" element="tns:WebServService___ConsEtiquetaEnvio3" />
+  </wsdl:message>
+  <wsdl:message name="WebServService___ConsEtiquetaEnvio3Response">
+    <wsdl:part name="parameters" element="tns:WebServService___ConsEtiquetaEnvio3Response" />
+  </wsdl:message>
+  <wsdl:message name="WebServService___ConsEtiquetaEnvio4Request">
+    <wsdl:part name="parameters" element="tns:WebServService___ConsEtiquetaEnvio4" />
+  </wsdl:message>
+  <wsdl:message name="WebServService___ConsEtiquetaEnvio4Response">
+    <wsdl:part name="parameters" element="tns:WebServService___ConsEtiquetaEnvio4Response" />
+  </wsdl:message>
+  <wsdl:message name="WebServService___ConsEtiquetaEnvio5Request">
+    <wsdl:part name="parameters" element="tns:WebServService___ConsEtiquetaEnvio5" />
+  </wsdl:message>
+  <wsdl:message name="WebServService___ConsEtiquetaEnvio5Response">
+    <wsdl:part name="parameters" element="tns:WebServService___ConsEtiquetaEnvio5Response" />
+  </wsdl:message>
+  <wsdl:message name="WebServService___ConsEnvIncidenciasRequest">
+    <wsdl:part name="parameters" element="tns:WebServService___ConsEnvIncidencias" />
+  </wsdl:message>
+  <wsdl:message name="WebServService___ConsEnvIncidenciasResponse">
+    <wsdl:part name="parameters" element="tns:WebServService___ConsEnvIncidenciasResponse" />
+  </wsdl:message>
+  <wsdl:message name="WebServService___ConsEnvIncidenciasRefRequest">
+    <wsdl:part name="parameters" element="tns:WebServService___ConsEnvIncidenciasRef" />
+  </wsdl:message>
+  <wsdl:message name="WebServService___ConsEnvIncidenciasRefResponse">
+    <wsdl:part name="parameters" element="tns:WebServService___ConsEnvIncidenciasRefResponse" />
+  </wsdl:message>
+  <wsdl:message name="WebServService___ConsRecIncidenciasRequest">
+    <wsdl:part name="parameters" element="tns:WebServService___ConsRecIncidencias" />
+  </wsdl:message>
+  <wsdl:message name="WebServService___ConsRecIncidenciasResponse">
+    <wsdl:part name="parameters" element="tns:WebServService___ConsRecIncidenciasResponse" />
+  </wsdl:message>
+  <wsdl:message name="WebServService___ConsRecIncidenciasRefRequest">
+    <wsdl:part name="parameters" element="tns:WebServService___ConsRecIncidenciasRef" />
+  </wsdl:message>
+  <wsdl:message name="WebServService___ConsRecIncidenciasRefResponse">
+    <wsdl:part name="parameters" element="tns:WebServService___ConsRecIncidenciasRefResponse" />
+  </wsdl:message>
+  <wsdl:message name="WebServService___ConsEnvPODDigRequest">
+    <wsdl:part name="parameters" element="tns:WebServService___ConsEnvPODDig" />
+  </wsdl:message>
+  <wsdl:message name="WebServService___ConsEnvPODDigResponse">
+    <wsdl:part name="parameters" element="tns:WebServService___ConsEnvPODDigResponse" />
+  </wsdl:message>
+  <wsdl:message name="WebServService___ConsEnvPODDig2Request">
+    <wsdl:part name="parameters" element="tns:WebServService___ConsEnvPODDig2" />
+  </wsdl:message>
+  <wsdl:message name="WebServService___ConsEnvPODDig2Response">
+    <wsdl:part name="parameters" element="tns:WebServService___ConsEnvPODDig2Response" />
+  </wsdl:message>
+  <wsdl:message name="WebServService___ConsEnvPODDigRefRequest">
+    <wsdl:part name="parameters" element="tns:WebServService___ConsEnvPODDigRef" />
+  </wsdl:message>
+  <wsdl:message name="WebServService___ConsEnvPODDigRefResponse">
+    <wsdl:part name="parameters" element="tns:WebServService___ConsEnvPODDigRefResponse" />
+  </wsdl:message>
+  <wsdl:message name="WebServService___BorraEnvioRequest">
+    <wsdl:part name="parameters" element="tns:WebServService___BorraEnvio" />
+  </wsdl:message>
+  <wsdl:message name="WebServService___BorraEnvioResponse">
+    <wsdl:part name="parameters" element="tns:WebServService___BorraEnvioResponse" />
+  </wsdl:message>
+  <wsdl:message name="WebServService___ConsEtiquetaEnvioMasivaRequest">
+    <wsdl:part name="parameters" element="tns:WebServService___ConsEtiquetaEnvioMasiva" />
+  </wsdl:message>
+  <wsdl:message name="WebServService___ConsEtiquetaEnvioMasivaResponse">
+    <wsdl:part name="parameters" element="tns:WebServService___ConsEtiquetaEnvioMasivaResponse" />
+  </wsdl:message>
+  <wsdl:message name="WebServService___InfEnvEstPODRequest">
+    <wsdl:part name="parameters" element="tns:WebServService___InfEnvEstPOD" />
+  </wsdl:message>
+  <wsdl:message name="WebServService___InfEnvEstPODResponse">
+    <wsdl:part name="parameters" element="tns:WebServService___InfEnvEstPODResponse" />
+  </wsdl:message>
+  <wsdl:message name="WebServService___GrabaRecDestinoRequest">
+    <wsdl:part name="parameters" element="tns:WebServService___GrabaRecDestino" />
+  </wsdl:message>
+  <wsdl:message name="WebServService___GrabaRecDestinoResponse">
+    <wsdl:part name="parameters" element="tns:WebServService___GrabaRecDestinoResponse" />
+  </wsdl:message>
+  <wsdl:message name="WebServService___GrabaRecDestino2Request">
+    <wsdl:part name="parameters" element="tns:WebServService___GrabaRecDestino2" />
+  </wsdl:message>
+  <wsdl:message name="WebServService___GrabaRecDestino2Response">
+    <wsdl:part name="parameters" element="tns:WebServService___GrabaRecDestino2Response" />
+  </wsdl:message>
+  <wsdl:message name="WebServService___GrabaRecDestino3Request">
+    <wsdl:part name="parameters" element="tns:WebServService___GrabaRecDestino3" />
+  </wsdl:message>
+  <wsdl:message name="WebServService___GrabaRecDestino3Response">
+    <wsdl:part name="parameters" element="tns:WebServService___GrabaRecDestino3Response" />
+  </wsdl:message>
+  <wsdl:message name="WebServService___GrabaRecogemeRequest">
+    <wsdl:part name="parameters" element="tns:WebServService___GrabaRecogeme" />
+  </wsdl:message>
+  <wsdl:message name="WebServService___GrabaRecogemeResponse">
+    <wsdl:part name="parameters" element="tns:WebServService___GrabaRecogemeResponse" />
+  </wsdl:message>
+  <wsdl:message name="WebServService___ConsEnvEstIncRefRequest">
+    <wsdl:part name="parameters" element="tns:WebServService___ConsEnvEstIncRef" />
+  </wsdl:message>
+  <wsdl:message name="WebServService___ConsEnvEstIncRefResponse">
+    <wsdl:part name="parameters" element="tns:WebServService___ConsEnvEstIncRefResponse" />
+  </wsdl:message>
+  <wsdl:message name="WebServService___ConsRecEstIncRefRequest">
+    <wsdl:part name="parameters" element="tns:WebServService___ConsRecEstIncRef" />
+  </wsdl:message>
+  <wsdl:message name="WebServService___ConsRecEstIncRefResponse">
+    <wsdl:part name="parameters" element="tns:WebServService___ConsRecEstIncRefResponse" />
+  </wsdl:message>
+  <wsdl:message name="WebServService___ConsEnvEstIncRequest">
+    <wsdl:part name="parameters" element="tns:WebServService___ConsEnvEstInc" />
+  </wsdl:message>
+  <wsdl:message name="WebServService___ConsEnvEstIncResponse">
+    <wsdl:part name="parameters" element="tns:WebServService___ConsEnvEstIncResponse" />
+  </wsdl:message>
+  <wsdl:message name="WebServService___ConsRecEstIncRequest">
+    <wsdl:part name="parameters" element="tns:WebServService___ConsRecEstInc" />
+  </wsdl:message>
+  <wsdl:message name="WebServService___ConsRecEstIncResponse">
+    <wsdl:part name="parameters" element="tns:WebServService___ConsRecEstIncResponse" />
+  </wsdl:message>
+  <wsdl:message name="WebServService___ConsEnvEstIncCambioEstadoRequest">
+    <wsdl:part name="parameters" element="tns:WebServService___ConsEnvEstIncCambioEstado" />
+  </wsdl:message>
+  <wsdl:message name="WebServService___ConsEnvEstIncCambioEstadoResponse">
+    <wsdl:part name="parameters" element="tns:WebServService___ConsEnvEstIncCambioEstadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="WebServService___ConsRecEstIncCambioEstadoRequest">
+    <wsdl:part name="parameters" element="tns:WebServService___ConsRecEstIncCambioEstado" />
+  </wsdl:message>
+  <wsdl:message name="WebServService___ConsRecEstIncCambioEstadoResponse">
+    <wsdl:part name="parameters" element="tns:WebServService___ConsRecEstIncCambioEstadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ROClientIDHeaderMessage">
+    <wsdl:part name="ROClientID" element="tns:ROClientIDHeader" />
+  </wsdl:message>
+  <wsdl:portType name="WebServService">
+    <wsdl:operation name="ConsEnvio">
+      <wsdl:input message="tns:WebServService___ConsEnvioRequest" />
+      <wsdl:output message="tns:WebServService___ConsEnvioResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsEnviosRef">
+      <wsdl:input message="tns:WebServService___ConsEnviosRefRequest" />
+      <wsdl:output message="tns:WebServService___ConsEnviosRefResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsEnvEstados">
+      <wsdl:input message="tns:WebServService___ConsEnvEstadosRequest" />
+      <wsdl:output message="tns:WebServService___ConsEnvEstadosResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsEnvEstadosRef">
+      <wsdl:input message="tns:WebServService___ConsEnvEstadosRefRequest" />
+      <wsdl:output message="tns:WebServService___ConsEnvEstadosRefResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsRecogida">
+      <wsdl:input message="tns:WebServService___ConsRecogidaRequest" />
+      <wsdl:output message="tns:WebServService___ConsRecogidaResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsRecogidasRef">
+      <wsdl:input message="tns:WebServService___ConsRecogidasRefRequest" />
+      <wsdl:output message="tns:WebServService___ConsRecogidasRefResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsRecEstados">
+      <wsdl:input message="tns:WebServService___ConsRecEstadosRequest" />
+      <wsdl:output message="tns:WebServService___ConsRecEstadosResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsRecEstadosRef">
+      <wsdl:input message="tns:WebServService___ConsRecEstadosRefRequest" />
+      <wsdl:output message="tns:WebServService___ConsRecEstadosRefResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GrabaEnvio">
+      <wsdl:input message="tns:WebServService___GrabaEnvioRequest" />
+      <wsdl:output message="tns:WebServService___GrabaEnvioResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GrabaEnvio2">
+      <wsdl:input message="tns:WebServService___GrabaEnvio2Request" />
+      <wsdl:output message="tns:WebServService___GrabaEnvio2Response" />
+    </wsdl:operation>
+    <wsdl:operation name="GrabaEnvio3">
+      <wsdl:input message="tns:WebServService___GrabaEnvio3Request" />
+      <wsdl:output message="tns:WebServService___GrabaEnvio3Response" />
+    </wsdl:operation>
+    <wsdl:operation name="GrabaEnvio4">
+      <wsdl:input message="tns:WebServService___GrabaEnvio4Request" />
+      <wsdl:output message="tns:WebServService___GrabaEnvio4Response" />
+    </wsdl:operation>
+    <wsdl:operation name="GrabaEnvio5">
+      <wsdl:input message="tns:WebServService___GrabaEnvio5Request" />
+      <wsdl:output message="tns:WebServService___GrabaEnvio5Response" />
+    </wsdl:operation>
+    <wsdl:operation name="GrabaEnvio6">
+      <wsdl:input message="tns:WebServService___GrabaEnvio6Request" />
+      <wsdl:output message="tns:WebServService___GrabaEnvio6Response" />
+    </wsdl:operation>
+    <wsdl:operation name="GrabaEnvio7">
+      <wsdl:input message="tns:WebServService___GrabaEnvio7Request" />
+      <wsdl:output message="tns:WebServService___GrabaEnvio7Response" />
+    </wsdl:operation>
+    <wsdl:operation name="GrabaRecogida">
+      <wsdl:input message="tns:WebServService___GrabaRecogidaRequest" />
+      <wsdl:output message="tns:WebServService___GrabaRecogidaResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GrabaRecogida2">
+      <wsdl:input message="tns:WebServService___GrabaRecogida2Request" />
+      <wsdl:output message="tns:WebServService___GrabaRecogida2Response" />
+    </wsdl:operation>
+    <wsdl:operation name="InfEnvios">
+      <wsdl:input message="tns:WebServService___InfEnviosRequest" />
+      <wsdl:output message="tns:WebServService___InfEnviosResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsEtiquetaEnvio">
+      <wsdl:input message="tns:WebServService___ConsEtiquetaEnvioRequest" />
+      <wsdl:output message="tns:WebServService___ConsEtiquetaEnvioResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsEtiquetaEnvio2">
+      <wsdl:input message="tns:WebServService___ConsEtiquetaEnvio2Request" />
+      <wsdl:output message="tns:WebServService___ConsEtiquetaEnvio2Response" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsEtiquetaEnvio3">
+      <wsdl:input message="tns:WebServService___ConsEtiquetaEnvio3Request" />
+      <wsdl:output message="tns:WebServService___ConsEtiquetaEnvio3Response" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsEtiquetaEnvio4">
+      <wsdl:input message="tns:WebServService___ConsEtiquetaEnvio4Request" />
+      <wsdl:output message="tns:WebServService___ConsEtiquetaEnvio4Response" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsEtiquetaEnvio5">
+      <wsdl:input message="tns:WebServService___ConsEtiquetaEnvio5Request" />
+      <wsdl:output message="tns:WebServService___ConsEtiquetaEnvio5Response" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsEnvIncidencias">
+      <wsdl:input message="tns:WebServService___ConsEnvIncidenciasRequest" />
+      <wsdl:output message="tns:WebServService___ConsEnvIncidenciasResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsEnvIncidenciasRef">
+      <wsdl:input message="tns:WebServService___ConsEnvIncidenciasRefRequest" />
+      <wsdl:output message="tns:WebServService___ConsEnvIncidenciasRefResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsRecIncidencias">
+      <wsdl:input message="tns:WebServService___ConsRecIncidenciasRequest" />
+      <wsdl:output message="tns:WebServService___ConsRecIncidenciasResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsRecIncidenciasRef">
+      <wsdl:input message="tns:WebServService___ConsRecIncidenciasRefRequest" />
+      <wsdl:output message="tns:WebServService___ConsRecIncidenciasRefResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsEnvPODDig">
+      <wsdl:input message="tns:WebServService___ConsEnvPODDigRequest" />
+      <wsdl:output message="tns:WebServService___ConsEnvPODDigResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsEnvPODDig2">
+      <wsdl:input message="tns:WebServService___ConsEnvPODDig2Request" />
+      <wsdl:output message="tns:WebServService___ConsEnvPODDig2Response" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsEnvPODDigRef">
+      <wsdl:input message="tns:WebServService___ConsEnvPODDigRefRequest" />
+      <wsdl:output message="tns:WebServService___ConsEnvPODDigRefResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="BorraEnvio">
+      <wsdl:input message="tns:WebServService___BorraEnvioRequest" />
+      <wsdl:output message="tns:WebServService___BorraEnvioResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsEtiquetaEnvioMasiva">
+      <wsdl:input message="tns:WebServService___ConsEtiquetaEnvioMasivaRequest" />
+      <wsdl:output message="tns:WebServService___ConsEtiquetaEnvioMasivaResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="InfEnvEstPOD">
+      <wsdl:input message="tns:WebServService___InfEnvEstPODRequest" />
+      <wsdl:output message="tns:WebServService___InfEnvEstPODResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GrabaRecDestino">
+      <wsdl:input message="tns:WebServService___GrabaRecDestinoRequest" />
+      <wsdl:output message="tns:WebServService___GrabaRecDestinoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GrabaRecDestino2">
+      <wsdl:input message="tns:WebServService___GrabaRecDestino2Request" />
+      <wsdl:output message="tns:WebServService___GrabaRecDestino2Response" />
+    </wsdl:operation>
+    <wsdl:operation name="GrabaRecDestino3">
+      <wsdl:input message="tns:WebServService___GrabaRecDestino3Request" />
+      <wsdl:output message="tns:WebServService___GrabaRecDestino3Response" />
+    </wsdl:operation>
+    <wsdl:operation name="GrabaRecogeme">
+      <wsdl:input message="tns:WebServService___GrabaRecogemeRequest" />
+      <wsdl:output message="tns:WebServService___GrabaRecogemeResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsEnvEstIncRef">
+      <wsdl:input message="tns:WebServService___ConsEnvEstIncRefRequest" />
+      <wsdl:output message="tns:WebServService___ConsEnvEstIncRefResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsRecEstIncRef">
+      <wsdl:input message="tns:WebServService___ConsRecEstIncRefRequest" />
+      <wsdl:output message="tns:WebServService___ConsRecEstIncRefResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsEnvEstInc">
+      <wsdl:input message="tns:WebServService___ConsEnvEstIncRequest" />
+      <wsdl:output message="tns:WebServService___ConsEnvEstIncResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsRecEstInc">
+      <wsdl:input message="tns:WebServService___ConsRecEstIncRequest" />
+      <wsdl:output message="tns:WebServService___ConsRecEstIncResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsEnvEstIncCambioEstado">
+      <wsdl:input message="tns:WebServService___ConsEnvEstIncCambioEstadoRequest" />
+      <wsdl:output message="tns:WebServService___ConsEnvEstIncCambioEstadoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsRecEstIncCambioEstado">
+      <wsdl:input message="tns:WebServService___ConsRecEstIncCambioEstadoRequest" />
+      <wsdl:output message="tns:WebServService___ConsRecEstIncCambioEstadoResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebServServiceBinding" type="tns:WebServService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ConsEnvio">
+      <soap:operation soapAction="urn:envialianet-WebServService#ConsEnvio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsEnviosRef">
+      <soap:operation soapAction="urn:envialianet-WebServService#ConsEnviosRef" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsEnvEstados">
+      <soap:operation soapAction="urn:envialianet-WebServService#ConsEnvEstados" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsEnvEstadosRef">
+      <soap:operation soapAction="urn:envialianet-WebServService#ConsEnvEstadosRef" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsRecogida">
+      <soap:operation soapAction="urn:envialianet-WebServService#ConsRecogida" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsRecogidasRef">
+      <soap:operation soapAction="urn:envialianet-WebServService#ConsRecogidasRef" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsRecEstados">
+      <soap:operation soapAction="urn:envialianet-WebServService#ConsRecEstados" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsRecEstadosRef">
+      <soap:operation soapAction="urn:envialianet-WebServService#ConsRecEstadosRef" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GrabaEnvio">
+      <soap:operation soapAction="urn:envialianet-WebServService#GrabaEnvio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GrabaEnvio2">
+      <soap:operation soapAction="urn:envialianet-WebServService#GrabaEnvio2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GrabaEnvio3">
+      <soap:operation soapAction="urn:envialianet-WebServService#GrabaEnvio3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GrabaEnvio4">
+      <soap:operation soapAction="urn:envialianet-WebServService#GrabaEnvio4" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GrabaEnvio5">
+      <soap:operation soapAction="urn:envialianet-WebServService#GrabaEnvio5" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GrabaEnvio6">
+      <soap:operation soapAction="urn:envialianet-WebServService#GrabaEnvio6" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GrabaEnvio7">
+      <soap:operation soapAction="urn:envialianet-WebServService#GrabaEnvio7" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GrabaRecogida">
+      <soap:operation soapAction="urn:envialianet-WebServService#GrabaRecogida" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GrabaRecogida2">
+      <soap:operation soapAction="urn:envialianet-WebServService#GrabaRecogida2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InfEnvios">
+      <soap:operation soapAction="urn:envialianet-WebServService#InfEnvios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsEtiquetaEnvio">
+      <soap:operation soapAction="urn:envialianet-WebServService#ConsEtiquetaEnvio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsEtiquetaEnvio2">
+      <soap:operation soapAction="urn:envialianet-WebServService#ConsEtiquetaEnvio2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsEtiquetaEnvio3">
+      <soap:operation soapAction="urn:envialianet-WebServService#ConsEtiquetaEnvio3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsEtiquetaEnvio4">
+      <soap:operation soapAction="urn:envialianet-WebServService#ConsEtiquetaEnvio4" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsEtiquetaEnvio5">
+      <soap:operation soapAction="urn:envialianet-WebServService#ConsEtiquetaEnvio5" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsEnvIncidencias">
+      <soap:operation soapAction="urn:envialianet-WebServService#ConsEnvIncidencias" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsEnvIncidenciasRef">
+      <soap:operation soapAction="urn:envialianet-WebServService#ConsEnvIncidenciasRef" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsRecIncidencias">
+      <soap:operation soapAction="urn:envialianet-WebServService#ConsRecIncidencias" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsRecIncidenciasRef">
+      <soap:operation soapAction="urn:envialianet-WebServService#ConsRecIncidenciasRef" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsEnvPODDig">
+      <soap:operation soapAction="urn:envialianet-WebServService#ConsEnvPODDig" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsEnvPODDig2">
+      <soap:operation soapAction="urn:envialianet-WebServService#ConsEnvPODDig2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsEnvPODDigRef">
+      <soap:operation soapAction="urn:envialianet-WebServService#ConsEnvPODDigRef" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BorraEnvio">
+      <soap:operation soapAction="urn:envialianet-WebServService#BorraEnvio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsEtiquetaEnvioMasiva">
+      <soap:operation soapAction="urn:envialianet-WebServService#ConsEtiquetaEnvioMasiva" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InfEnvEstPOD">
+      <soap:operation soapAction="urn:envialianet-WebServService#InfEnvEstPOD" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GrabaRecDestino">
+      <soap:operation soapAction="urn:envialianet-WebServService#GrabaRecDestino" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GrabaRecDestino2">
+      <soap:operation soapAction="urn:envialianet-WebServService#GrabaRecDestino2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GrabaRecDestino3">
+      <soap:operation soapAction="urn:envialianet-WebServService#GrabaRecDestino3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GrabaRecogeme">
+      <soap:operation soapAction="urn:envialianet-WebServService#GrabaRecogeme" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsEnvEstIncRef">
+      <soap:operation soapAction="urn:envialianet-WebServService#ConsEnvEstIncRef" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsRecEstIncRef">
+      <soap:operation soapAction="urn:envialianet-WebServService#ConsRecEstIncRef" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsEnvEstInc">
+      <soap:operation soapAction="urn:envialianet-WebServService#ConsEnvEstInc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsRecEstInc">
+      <soap:operation soapAction="urn:envialianet-WebServService#ConsRecEstInc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsEnvEstIncCambioEstado">
+      <soap:operation soapAction="urn:envialianet-WebServService#ConsEnvEstIncCambioEstado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsRecEstIncCambioEstado">
+      <soap:operation soapAction="urn:envialianet-WebServService#ConsRecEstIncCambioEstado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+        <soap:header message="tns:ROClientIDHeaderMessage" part="ROClientID" use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebServService">
+    <wsdl:port name="WebServServicePort" binding="tns:WebServServiceBinding">
+      <soap:address location="http://wstest.envialia.com:9081/soap?service=WebServService" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

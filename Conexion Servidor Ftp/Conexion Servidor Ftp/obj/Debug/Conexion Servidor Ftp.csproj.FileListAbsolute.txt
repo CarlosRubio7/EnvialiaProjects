@@ -1,0 +1,31 @@
+c:\users\usuario\documents\visual studio 2013\Projects\Conexion Servidor Ftp\Conexion Servidor Ftp\bin\Debug\Conexion Servidor Ftp.exe.config
+c:\users\usuario\documents\visual studio 2013\Projects\Conexion Servidor Ftp\Conexion Servidor Ftp\bin\Debug\Conexion Servidor Ftp.exe
+c:\users\usuario\documents\visual studio 2013\Projects\Conexion Servidor Ftp\Conexion Servidor Ftp\bin\Debug\Conexion Servidor Ftp.pdb
+c:\users\usuario\documents\visual studio 2013\Projects\Conexion Servidor Ftp\Conexion Servidor Ftp\obj\Debug\Conexion Servidor Ftp.csprojResolveAssemblyReference.cache
+c:\users\usuario\documents\visual studio 2013\Projects\Conexion Servidor Ftp\Conexion Servidor Ftp\obj\Debug\Conexion_Servidor_Ftp.Properties.Resources.resources
+c:\users\usuario\documents\visual studio 2013\Projects\Conexion Servidor Ftp\Conexion Servidor Ftp\obj\Debug\Conexion Servidor Ftp.csproj.GenerateResource.Cache
+c:\users\usuario\documents\visual studio 2013\Projects\Conexion Servidor Ftp\Conexion Servidor Ftp\obj\Debug\Conexion Servidor Ftp.exe
+c:\users\usuario\documents\visual studio 2013\Projects\Conexion Servidor Ftp\Conexion Servidor Ftp\obj\Debug\Conexion Servidor Ftp.pdb
+C:\Users\Usuario\Documents\Visual Studio 2013\Projects\Conexion Servidor Ftp\Conexion Servidor Ftp\obj\Debug\Conexion_Servidor_Ftp.MenuPedidos.resources
+C:\Users\Usuario\Documents\Visual Studio 2013\Projects\Conexion Servidor Ftp\Conexion Servidor Ftp\obj\Debug\Conexion_Servidor_Ftp.MenuPrincipal.resources
+C:\Users\Usuario\documents\visual studio 2013\Projects\Conexion Servidor Ftp\Conexion Servidor Ftp\obj\Debug\Conexion_Servidor_Ftp.Modificar.resources
+C:\Users\Usuario\Documents\Visual Studio 2013\Projects\Conexion Servidor Ftp\Conexion Servidor Ftp\obj\Debug\Interop.LCC11.dll
+C:\Users\Usuario\Documents\Visual Studio 2013\Projects\Conexion Servidor Ftp\Conexion Servidor Ftp\obj\Debug\Conexion Servidor Ftp.csproj.ResolveComReference.cache
+C:\Users\Usuario\documents\visual studio 2013\Projects\Conexion Servidor Ftp\Conexion Servidor Ftp\bin\Debug\Conexion Servidor Ftp.exe.manifest
+C:\Users\Usuario\documents\visual studio 2013\Projects\Conexion Servidor Ftp\Conexion Servidor Ftp\bin\Debug\Conexion Servidor Ftp.application
+C:\Users\Usuario\documents\visual studio 2013\Projects\Conexion Servidor Ftp\Conexion Servidor Ftp\obj\Debug\Conexion Servidor Ftp.exe.manifest
+C:\Users\Usuario\documents\visual studio 2013\Projects\Conexion Servidor Ftp\Conexion Servidor Ftp\obj\Debug\Conexion Servidor Ftp.application
+C:\Users\Usuario\documents\visual studio 2013\Projects\Conexion Servidor Ftp\Conexion Servidor Ftp\obj\Debug\Conexion_Servidor_Ftp.ImportarBDD.resources
+C:\Users\Usuario\documents\visual studio 2013\Projects\Conexion Servidor Ftp\Conexion Servidor Ftp\bin\Debug\BddPedidos.sdf
+C:\Users\Usuario\Source\Repos\CarlosRubio7\EnvialiaProjects\Conexion Servidor Ftp\Conexion Servidor Ftp\obj\Debug\Conexion Servidor Ftp.csprojAssemblyReference.cache
+C:\Users\Usuario\Source\Repos\CarlosRubio7\EnvialiaProjects\Conexion Servidor Ftp\Conexion Servidor Ftp\obj\Debug\Interop.LCC11.dll
+C:\Users\Usuario\Source\Repos\CarlosRubio7\EnvialiaProjects\Conexion Servidor Ftp\Conexion Servidor Ftp\obj\Debug\Conexion Servidor Ftp.csproj.ResolveComReference.cache
+C:\Users\Usuario\Source\Repos\CarlosRubio7\EnvialiaProjects\Conexion Servidor Ftp\Conexion Servidor Ftp\obj\Debug\Conexion_Servidor_Ftp.ImportarBDD.resources
+C:\Users\Usuario\Source\Repos\CarlosRubio7\EnvialiaProjects\Conexion Servidor Ftp\Conexion Servidor Ftp\obj\Debug\Conexion_Servidor_Ftp.MenuPedidos.resources
+C:\Users\Usuario\Source\Repos\CarlosRubio7\EnvialiaProjects\Conexion Servidor Ftp\Conexion Servidor Ftp\obj\Debug\Conexion_Servidor_Ftp.MenuPrincipal.resources
+C:\Users\Usuario\Source\Repos\CarlosRubio7\EnvialiaProjects\Conexion Servidor Ftp\Conexion Servidor Ftp\obj\Debug\Conexion_Servidor_Ftp.Modificar.resources
+C:\Users\Usuario\Source\Repos\CarlosRubio7\EnvialiaProjects\Conexion Servidor Ftp\Conexion Servidor Ftp\obj\Debug\Conexion_Servidor_Ftp.Properties.Resources.resources
+C:\Users\Usuario\Source\Repos\CarlosRubio7\EnvialiaProjects\Conexion Servidor Ftp\Conexion Servidor Ftp\obj\Debug\Conexion Servidor Ftp.csproj.GenerateResource.cache
+C:\Users\Usuario\Source\Repos\CarlosRubio7\EnvialiaProjects\Conexion Servidor Ftp\Conexion Servidor Ftp\obj\Debug\Conexion Servidor Ftp.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Source\Repos\CarlosRubio7\EnvialiaProjects\Conexion Servidor Ftp\Conexion Servidor Ftp\obj\Debug\Conexion Servidor Ftp.exe
+C:\Users\Usuario\Source\Repos\CarlosRubio7\EnvialiaProjects\Conexion Servidor Ftp\Conexion Servidor Ftp\obj\Debug\Conexion Servidor Ftp.pdb
