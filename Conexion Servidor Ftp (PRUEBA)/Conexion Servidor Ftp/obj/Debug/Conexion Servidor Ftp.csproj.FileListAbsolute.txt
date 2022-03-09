@@ -36,3 +36,22 @@ C:\Users\Usuario\Documents\Visual Studio 2013\Projects\Conexion Servidor Ftp (PR
 C:\Users\Usuario\Documents\Visual Studio 2013\Projects\Conexion Servidor Ftp (PRUEBA)\Conexion Servidor Ftp\bin\Debug\Conexion Servidor Ftp.pdb
 C:\Users\Usuario\Documents\Visual Studio 2013\Projects\Conexion Servidor Ftp (PRUEBA)\Conexion Servidor Ftp\obj\Debug\Conexion Servidor Ftp.exe.manifest
 C:\Users\Usuario\Documents\Visual Studio 2013\Projects\Conexion Servidor Ftp (PRUEBA)\Conexion Servidor Ftp\obj\Debug\Conexion Servidor Ftp.application
+C:\Users\carlo\source\repos\CarlosRubio7\EnvialiaProjects\Conexion Servidor Ftp (PRUEBA)\Conexion Servidor Ftp\obj\Debug\Conexion Servidor Ftp.csproj.AssemblyReference.cache
+C:\Users\carlo\source\repos\CarlosRubio7\EnvialiaProjects\Conexion Servidor Ftp (PRUEBA)\Conexion Servidor Ftp\obj\Debug\Conexion Servidor Ftp.csproj.ResolveComReference.cache
+C:\Users\carlo\source\repos\CarlosRubio7\EnvialiaProjects\Conexion Servidor Ftp (PRUEBA)\Conexion Servidor Ftp\obj\Debug\Conexion_Servidor_Ftp.ImportarBDD.resources
+C:\Users\carlo\source\repos\CarlosRubio7\EnvialiaProjects\Conexion Servidor Ftp (PRUEBA)\Conexion Servidor Ftp\obj\Debug\Conexion_Servidor_Ftp.MenuPedidos.resources
+C:\Users\carlo\source\repos\CarlosRubio7\EnvialiaProjects\Conexion Servidor Ftp (PRUEBA)\Conexion Servidor Ftp\obj\Debug\Conexion_Servidor_Ftp.MenuPrincipal.resources
+C:\Users\carlo\source\repos\CarlosRubio7\EnvialiaProjects\Conexion Servidor Ftp (PRUEBA)\Conexion Servidor Ftp\obj\Debug\Conexion_Servidor_Ftp.Modificar.resources
+C:\Users\carlo\source\repos\CarlosRubio7\EnvialiaProjects\Conexion Servidor Ftp (PRUEBA)\Conexion Servidor Ftp\obj\Debug\AppUptook.Properties.Resources.resources
+C:\Users\carlo\source\repos\CarlosRubio7\EnvialiaProjects\Conexion Servidor Ftp (PRUEBA)\Conexion Servidor Ftp\obj\Debug\Conexion Servidor Ftp.csproj.GenerateResource.cache
+C:\Users\carlo\source\repos\CarlosRubio7\EnvialiaProjects\Conexion Servidor Ftp (PRUEBA)\Conexion Servidor Ftp\obj\Debug\Conexion Servidor Ftp.csproj.CoreCompileInputs.cache
+C:\Users\carlo\source\repos\CarlosRubio7\EnvialiaProjects\Conexion Servidor Ftp (PRUEBA)\Conexion Servidor Ftp\obj\Debug\AppUptook.exe
+C:\Users\carlo\source\repos\CarlosRubio7\EnvialiaProjects\Conexion Servidor Ftp (PRUEBA)\Conexion Servidor Ftp\obj\Debug\AppUptook.pdb
+C:\Users\carlo\source\repos\CarlosRubio7\EnvialiaProjects\Conexion Servidor Ftp (PRUEBA)\Conexion Servidor Ftp\bin\Debug\BddPedidos.sdf
+C:\Users\carlo\source\repos\CarlosRubio7\EnvialiaProjects\Conexion Servidor Ftp (PRUEBA)\Conexion Servidor Ftp\bin\Debug\AppUptook.exe.config
+C:\Users\carlo\source\repos\CarlosRubio7\EnvialiaProjects\Conexion Servidor Ftp (PRUEBA)\Conexion Servidor Ftp\bin\Debug\AppUptook.exe.manifest
+C:\Users\carlo\source\repos\CarlosRubio7\EnvialiaProjects\Conexion Servidor Ftp (PRUEBA)\Conexion Servidor Ftp\bin\Debug\AppUptook.application
+C:\Users\carlo\source\repos\CarlosRubio7\EnvialiaProjects\Conexion Servidor Ftp (PRUEBA)\Conexion Servidor Ftp\bin\Debug\AppUptook.exe
+C:\Users\carlo\source\repos\CarlosRubio7\EnvialiaProjects\Conexion Servidor Ftp (PRUEBA)\Conexion Servidor Ftp\bin\Debug\AppUptook.pdb
+C:\Users\carlo\source\repos\CarlosRubio7\EnvialiaProjects\Conexion Servidor Ftp (PRUEBA)\Conexion Servidor Ftp\obj\Debug\AppUptook.exe.manifest
+C:\Users\carlo\source\repos\CarlosRubio7\EnvialiaProjects\Conexion Servidor Ftp (PRUEBA)\Conexion Servidor Ftp\obj\Debug\AppUptook.application

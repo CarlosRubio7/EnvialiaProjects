@@ -22,6 +22,14 @@ using System.Threading.Tasks;
 //***FIN*** MOD 01/03/2018 ***FIN***//
 //
 //************          MODIFICACIÓN 01/03/2018              ****************/
+//************          MODIFICACIÓN 09/03/2022              ****************/
+//
+// NUEVA VERSIÓN EN LA QUE SE INCLUYEN LOS SIGUIENTES CAMBIOS:
+// 1 - CAMBIO CREDENCIALES PARA CONECTAR AL SERVIDOR
+//***INI*** MOD 09/03/2022 ***INI***//
+//***FIN*** MOD 09/03/2022 ***FIN***//
+//
+//************          MODIFICACIÓN 09/03/2022             ****************/
 
 namespace Conexion_Servidor_Ftp
 {
@@ -69,11 +77,15 @@ namespace Conexion_Servidor_Ftp
             {
                 while(reader.Peek() >= 0)
                 {
+                    //string fileName = reader.ReadLine();
                     string fileName = reader.ReadLine();
-//***INI*** MOD 01/03/2018 ***INI***//
-                    //if (fileName.Substring(0, 11) != "pedidos/old")
-                    if (fileName.Substring(0, 23) != "pruebapedidos/oldprueba")
-//***FIN*** MOD 01/03/2018 ***FIN***//
+                    //***INI*** MOD 01/03/2018 ***INI***//                    
+                    //if (fileName.Substring(0, 14) != "pruebapedidos/oldprueba")
+                    //if (fileName.Substring(0, 9) != "pedidos/.")
+                    //***FIN*** MOD 01/03/2018 ***FIN***//
+                    //***INI*** MOD 09/03/2022 ***INI***//     
+                    if ((fileName.Substring(0, 8) != "pedidos") && (fileName.Substring(0, 9) != "pedidos/.") && (fileName.Substring(0, 10) != "pedidos/..") && (fileName.Substring(0, 11) != "pedidos/old"))
+                    //***FIN*** MOD 09/03/2022 ***FIN***//
                     {
                         files.Add(new FtpFile 
                         {
@@ -124,8 +136,8 @@ namespace Conexion_Servidor_Ftp
                 ftpClient.Method = WebRequestMethods.Ftp.Rename;
                 /* Rename the File */
 //***FIN*** MOD 01/03/2018 ***FIN***//
-                //ftpClient.RenameTo = "/pedidos/old/" + f.FileName;
-                ftpClient.RenameTo = "/pedidos/old/pruebapedidos/oldprueba" + f.FileName;
+                ftpClient.RenameTo = "/pedidos/old/" + f.FileName;
+                //ftpClient.RenameTo = "/pedidos/old/pruebapedidos/oldprueba" + f.FileName;
 //***FIN*** MOD 01/03/2018 ***FIN***//
                 /* Establish Return Communication with the FTP Server */
                 var response = (FtpWebResponse)ftpClient.GetResponse();

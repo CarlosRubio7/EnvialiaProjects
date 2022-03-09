@@ -35,6 +35,14 @@ using System.Xml.Serialization;
 //***FIN*** MOD 21/11/2019 ***FIN***//
 //
 //************          MODIFICACIÓN 21/11/2019              ****************/
+//************          MODIFICACIÓN 09/03/2022              ****************/
+//
+// NUEVA VERSIÓN EN LA QUE SE INCLUYEN LOS SIGUIENTES CAMBIOS:
+// 1 - CAMBIO CREDENCIALES PARA CONECTAR AL SERVIDOR
+//***INI*** MOD 09/03/2022 ***INI***//
+//***FIN*** MOD 09/03/2022 ***FIN***//
+//
+//************          MODIFICACIÓN 09/03/2022             ****************/
 
 namespace Conexion_Servidor_Ftp
 {
@@ -47,7 +55,6 @@ namespace Conexion_Servidor_Ftp
         Exportar export;
         string dato;
         bool vacio;
-        string folderpath = "C:\\FICHEROS FTP\\";
         public string Dato
         {
             get
@@ -130,15 +137,13 @@ namespace Conexion_Servidor_Ftp
             con.ConexionBd();
             var ftp = new FtpSettings
             {
+                //***INI*** MOD 09/03/2022 ***INI***//
                 Port = 21,
-                Server = "backend.latiendahome.com",
-//***INI*** MOD 01/03/2018 ***INI***//
-                //RemoteFolderPath = "/pedidos",
-                RemoteFolderPath = "/pedidos/old/pruebapedidos",
-//***FIN*** MOD 01/03/2018 ***FIN***//
+                Server = "185.105.223.35",
+                RemoteFolderPath = "/pedidos",
                 User = "envialia",
-                Password = "c1a009859f304bb0bd7bc6b9ac159f2f"
-
+                Password = "fietaez7uthoo8queeT3ooquovezaeh"
+                //***FIN*** MOD 09/03/2022 ***FIN***//
             };
             try
             {
