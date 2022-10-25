@@ -3,33 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-//************          MODIFICACIÓN 21/11/2019              ****************/
-//
-// NUEVA VERSIÓN EN LA QUE SE INCLUYEN LOS SIGUIENTES CAMBIOS:
-// 1 - INCLUIR UNA COLUMNA CON EL MAIL
-//***INI*** MOD 21/11/2019 ***INI***//
-//***FIN*** MOD 21/11/2019 ***FIN***//
-//
-//************          MODIFICACIÓN 21/11/2019              ****************/
 
 namespace Conexion_Servidor_Ftp
 {
     public class LineaPedido
     {
-//**INI-13/06/2017**//
         string Peso = "0";
-//**FIN-13/06/2017**//
-
-//**INI-05/06/2017**//
-        /* public LineaPedido(String numero, String referencia, String fecha, Entrega entrega, String proveedor, Bulto bulto)
-         {
-             NumeroPedido = numero;
-             ReferenciaPedido = referencia;
-             FechaPedido = fecha;
-             Entrega = entrega;
-             NombreProveedor = proveedor;
-             Bulto = bulto;
-         }
 
         public LineaPedido(String numero, String referencia, String fecha, Entrega entrega, String proveedor, Bulto bulto, Notas nota, String retorno)
         {
@@ -42,53 +21,13 @@ namespace Conexion_Servidor_Ftp
             if (nota == null)
             {
                 Nota = new Notas();
-                Nota.Nota.Add("0");
-            }
-            else
-                Nota = nota;
-
-            Retorno = retorno;
-        }*/
-//**FIN-05/06/2017**//
-//***INI*** MOD 21/11/2019 ***INI***//
-       /* public LineaPedido(String numero, String referencia, String fecha, Entrega entrega, String proveedor, Bulto bulto, Notas nota, String retorno)
-        {
-            NumeroPedido = numero;
-            ReferenciaPedido = referencia;
-            FechaPedido = fecha;
-            Entrega = entrega;
-            NombreProveedor = proveedor;
-            Bulto = bulto;
-            if (nota == null)
-            {
-                Nota = new Notas();
-                Nota.Nota.Add("0");
-            }
-            else
-                Nota = nota;
-
-            Retorno = retorno;
-        }*/
-        public LineaPedido(String numero, String referencia, String fecha, Entrega entrega, String proveedor, Bulto bulto, Notas nota, String retorno)
-        {
-            NumeroPedido = numero;
-            ReferenciaPedido = referencia;
-            FechaPedido = fecha;
-            Entrega = entrega;
-            NombreProveedor = proveedor;
-            Bulto = bulto;
-            if (nota == null)
-            {
-                Nota = new Notas();
-                Nota.Nota.Add("0");
+                Nota.Tipo = "0";
             }
             else
                 Nota = nota;
 
             Retorno = retorno;
         }
-
-//***FIN*** MOD 21/11/2019 ***FIN***//
 
         public String NumeroPedido { get; set; }
 
@@ -108,31 +47,6 @@ namespace Conexion_Servidor_Ftp
 
         public String toCSV()
         {
-            //**INI-13/06/2017**//
-            /*var newLine = string.Format("{0};{1};{2};{3};{4};{5};{6};{7};{8};{9};{10};{11};{12};{13};{14};{15};{16};{17};{18}",
-                    NumeroPedido,
-                    ReferenciaPedido,
-                    FechaPedido,
-                    Entrega.Nombre,
-                    Entrega.Direccion,
-                    Entrega.Ciudad,
-                    Entrega.Cp,
-                    Entrega.Email,
-                    Entrega.Telefonos.FirstOrDefault(),
-                    NombreProveedor,
-                    "1",
-                    Bulto.Volumen,
-                    Bulto.Peso,
-                    Bulto.Etiqueta,
-                    Bulto.Referencia,
-                    Bulto.Descripcion,
-                    Bulto.Agencia,
-                    Bulto.CodigoAgencia,
-                    Nota.Nota.FirstOrDefault()
-                    );
-
-            return newLine;*/
-
             var newLine = string.Format("{0};{1};{2};{3};{4};{5};{6};{7};{8};{9};{10};{11};{12};{13};{14};{15};{16};{17};{18}",
                 NumeroPedido,
                 ReferenciaPedido,
@@ -140,7 +54,7 @@ namespace Conexion_Servidor_Ftp
                 Entrega.Nombre,
                 Entrega.Direccion,
                 Entrega.Ciudad,
-                Entrega.Cp, 
+                Entrega.Cp,
                 Entrega.Email,
                 Entrega.Telefonos.FirstOrDefault(),
                 NombreProveedor,
@@ -152,7 +66,7 @@ namespace Conexion_Servidor_Ftp
                 Bulto.Descripcion,
                 Bulto.Agencia,
                 Bulto.CodigoAgencia,
-                Nota.Nota.FirstOrDefault()
+                Nota.Valor.FirstOrDefault()
             );
 
             return newLine;
@@ -169,10 +83,10 @@ namespace Conexion_Servidor_Ftp
                     Peso = "0";
                     break;
                 case "EN000000001":
-                    Peso = "2";
+                    Peso = "4";
                     break;
                 case "EN000000002":
-                    Peso = "2";
+                    Peso = "4";
                     break;
                 case "EN000000003":
                     Peso = "2";
@@ -196,10 +110,10 @@ namespace Conexion_Servidor_Ftp
                     Peso = "8";
                     break;
                 case "EN000000010":
-                    Peso = "10";
+                    Peso = "14";
                     break;
                 case "EN000000011":
-                    Peso = "15";
+                    Peso = "20";
                     break;
                 case "EN000000012":
                     Peso = "20";
@@ -208,7 +122,7 @@ namespace Conexion_Servidor_Ftp
                     Peso = "25";
                     break;
                 case "EN000000014":
-                    Peso = "12";
+                    Peso = "19";
                     break;
                 case "EN000000015":
                     Peso = "20";
@@ -217,13 +131,13 @@ namespace Conexion_Servidor_Ftp
                     Peso = "5";
                     break;
                 case "EN000000017":
-                    Peso = "13";
+                    Peso = "18";
                     break;
                 case "EN000000018":
                     Peso = "10";
                     break;
                 case "EN000000019":
-                    Peso = "10";
+                    Peso = "0";
                     break;
                 case "EN000000020":
                     Peso = "10";
@@ -241,10 +155,10 @@ namespace Conexion_Servidor_Ftp
                     Peso = "10";
                     break;
                 case "EN000000025":
-                    Peso = "10";
+                    Peso = "14";
                     break;
                 case "EN000000026":
-                    Peso = "15";
+                    Peso = "29";
                     break;
                 case "EN000000027":
                     Peso = "2";
@@ -255,9 +169,32 @@ namespace Conexion_Servidor_Ftp
                 case "EN000000029":
                     Peso = "25";
                     break;
+                case "EN000000034":
+                    Peso = "25";
+                    break;
+                case "EN000000035":
+                    Peso = "15";
+                    break;
+                case "EN000000036":
+                    Peso = "30";
+                    break;
+                case "EN000000037":
+                    Peso = "24";
+                    break;
+                case "EN000000038":
+                    Peso = "24";
+                    break;
+                case "EN000000039":
+                    Peso = "16";
+                    break;
+                case "EN000000040":
+                    Peso = "14";
+                    break;
+                case "EN000000041":
+                    Peso = "28";
+                    break;
             }
             return Peso;
         }
-        //**FIN-13/06/2017**//
     }
 }

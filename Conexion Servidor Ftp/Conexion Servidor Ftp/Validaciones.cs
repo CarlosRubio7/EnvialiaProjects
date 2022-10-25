@@ -68,8 +68,6 @@ namespace Conexion_Servidor_Ftp
                 limite = false;
             else if (l.Bulto.CodigoAgencia.Length > 15)
                 limite = false;
-            else if (l.Nota.Nota.FirstOrDefault().Length > 10)
-                limite = false;
 
             return limite;
         }

@@ -111,7 +111,7 @@ namespace Conexion_Servidor_Ftp
                         }
                     }
                 }
-            }            
+            }
         }
 
         /****************************************************************************/
@@ -131,13 +131,10 @@ namespace Conexion_Servidor_Ftp
             var ftp = new FtpSettings
             {
                 Port = 21,
-                Server = "backend.latiendahome.com",
-//***INI*** MOD 01/03/2018 ***INI***//
-                //RemoteFolderPath = "/pedidos",
-                RemoteFolderPath = "/pedidos/old/pruebapedidos",
-//***FIN*** MOD 01/03/2018 ***FIN***//
+                Server = "integracion.latiendahome.com",
+                RemoteFolderPath = "/pedidos",
                 User = "envialia",
-                Password = "c1a009859f304bb0bd7bc6b9ac159f2f"
+                Password = "fietaez7uthoo8queeT3ooquovezaeh"
 
             };
             try
@@ -151,9 +148,9 @@ namespace Conexion_Servidor_Ftp
                 if (tb_ruta.Text != "")
                 {
                     //Descargamos los ficheros obtenidos en una carpeta local
-                    ftphelper.WriteFiles(listaFicheros, tb_ruta.Text);
+                    //ftphelper.WriteFiles(listaFicheros, tb_ruta.Text);
                     //Pasamos los ficheros descargados a local a la carpeta de backup del servidor ftp
-                    ftphelper.WriteFilesBackupFtp(listaFicheros);
+                    //ftphelper.WriteFilesBackupFtp(listaFicheros);
                     //Leemos los ficheros de la carpeta y los guardamos en la base de datos
                     this.LeerFicheros(listaFicheros, tb_ruta.Text);
                     //Creamos un directorio Backup para mover los ficheros leidos e insertados en la base de datos
@@ -164,9 +161,6 @@ namespace Conexion_Servidor_Ftp
                     this.RellenarComboBox();
                     //Actualizamos el datagrid con los datos de la base de datos
                     this.Refresh();
-                    //***INI*** MOD 01/03/2018 ***INI***//
-                    //this.cargar_combobox();
-                    //***FIN*** MOD 01/03/2018 ***FIN***//
 
                     if (dataGridView1.RowCount > 0)
                     {
@@ -180,7 +174,7 @@ namespace Conexion_Servidor_Ftp
                     {
                         bt_traspasar_origen.Enabled = true;
                         bt_generar.Enabled = true;
-                        bt_clear.Enabled = true;                        
+                        bt_clear.Enabled = true;
                     }
 
                     con.DesconectarBd();
@@ -195,7 +189,7 @@ namespace Conexion_Servidor_Ftp
             {
                 MessageBox.Show("There was an error connecting to the FTP Server.");
                 con.DesconectarBd();
-            }   
+            }
         }
 
         /****************************************************************************/
@@ -229,15 +223,13 @@ namespace Conexion_Servidor_Ftp
                             id = row.Cells["Id"].Value.ToString();
                             tipo_servicio = row.Cells["Servicio"].Value.ToString();
                             stock = "SI";
-                            //con.UpdateStockBd(id, stock);
                             con.UpdateServicioStockBd(id, tipo_servicio, stock);
-                        } 
+                        }
                         else
                         {
                             id = row.Cells["Id"].Value.ToString();
                             tipo_servicio = row.Cells["Servicio"].Value.ToString();
                             stock = "NO";
-                            //con.UpdateStockBd(id, stock);
                             con.UpdateServicioStockBd(id, tipo_servicio, stock);
                         }
                     }
@@ -305,7 +297,6 @@ namespace Conexion_Servidor_Ftp
         {
             con.ConexionBd();
             string dato = "";
-            //dato = dataGridView2.CurrentRow.Cells["Id"].Value.ToString();
             try
             {
                 export = new Exportar();
@@ -339,8 +330,7 @@ namespace Conexion_Servidor_Ftp
         private void bt_traspasar_Click(object sender, EventArgs e)
         {
             List<DataGridViewRow> rowSelected = new List<DataGridViewRow>();
-            //dataGridView2.Refresh();
-            if(dataGridView2.RowCount == 0)
+            if (dataGridView2.RowCount == 0)
             {
                 //Creamos un datagrid
                 this.CrearDataGrid(dataGridView2);
@@ -358,7 +348,7 @@ namespace Conexion_Servidor_Ftp
                         rowSelected.Add(dataGridView1.SelectedRows[i]);
                     }
                 }
-            }            
+            }
 
             //
             // Se agrega el item seleccionado a la grilla de destino
@@ -372,27 +362,23 @@ namespace Conexion_Servidor_Ftp
                                             row.Cells["Proveedor"].Value,
                                             row.Cells["Código de tarifa"].Value,
                                             row.Cells["Destinatario"].Value,
-                                            row.Cells["Id"].Value,                                            
+                                            row.Cells["Id"].Value,
                                             row.Cells["Fecha pedido"].Value,
-                                            row.Cells["Dirección"].Value,                                          
+                                            row.Cells["Dirección"].Value,
                                             row.Cells["Población"].Value,
                                             row.Cells["Código postal"].Value,
                                             row.Cells["Teléfono"].Value,
                                             row.Cells["Descripción producto"].Value,
                                             row.Cells["Bultos"].Value,
                                             row.Cells["Peso"].Value,
-                                            row.Cells["Referencia producto"].Value,                                            
+                                            row.Cells["Referencia producto"].Value,
                                             row.Cells["Reembolso"].Value,
                                             row.Cells["Retorno"].Value,
                                             row.Cells["Observaciones"].Value,
-//***INI*** MOD 01/03/2018 ***INI***//
                                             row.Cells["Etiquetas"].Value,
                                             row.Cells["Servicio"].Value, 
-//***FIN*** MOD 01/03/2018 ***FIN***//
-//***INI*** MOD 21/11/2019 ***INI***//
                                             row.Cells["Mail"].Value, 
-//***FIN*** MOD 21/11/2019 ***FIN***//
-                                            row.Cells["chk"].Value                                          
+                                            row.Cells["chk"].Value
                                             });
 
                 dataGridView1.Rows.Remove(row);
@@ -415,10 +401,8 @@ namespace Conexion_Servidor_Ftp
         {
             ImportarBDD frm = new ImportarBDD();
             frm.ShowDialog();
-            //con.ConexionBd();
             this.CrearDataGrid(dataGridView1);
             this.Refresh();
-            //con.DesconectarBd();
         }
 
         /****************************************************************************/
@@ -462,7 +446,6 @@ namespace Conexion_Servidor_Ftp
                     }
                 }
             }
-            //this.Refresh();
             //
             // Se agrega el item seleccionado a la grilla de destino
             // eliminando la fila de la grilla original
@@ -475,27 +458,23 @@ namespace Conexion_Servidor_Ftp
                                             row.Cells["Proveedor"].Value,
                                             row.Cells["Código de tarifa"].Value,
                                             row.Cells["Destinatario"].Value,
-                                            row.Cells["Id"].Value,                                            
+                                            row.Cells["Id"].Value,
                                             row.Cells["Fecha pedido"].Value,
-                                            row.Cells["Dirección"].Value,                                          
+                                            row.Cells["Dirección"].Value,
                                             row.Cells["Población"].Value,
                                             row.Cells["Código postal"].Value,
                                             row.Cells["Teléfono"].Value,
                                             row.Cells["Descripción producto"].Value,
                                             row.Cells["Bultos"].Value,
                                             row.Cells["Peso"].Value,
-                                            row.Cells["Referencia producto"].Value,                                            
+                                            row.Cells["Referencia producto"].Value,
                                             row.Cells["Reembolso"].Value,
                                             row.Cells["Retorno"].Value,
                                             row.Cells["Observaciones"].Value,
-//***INI*** MOD 01/03/2018 ***INI***//
                                             row.Cells["Etiquetas"].Value,
                                             row.Cells["Servicio"].Value, 
-//***FIN*** MOD 01/03/2018 ***FIN***//
-//***INI*** MOD 21/11/2019 ***INI***//
                                             row.Cells["Mail"].Value, 
-//***FIN*** MOD 21/11/2019 ***FIN***//
-                                            row.Cells["chk"].Value                                          
+                                            row.Cells["chk"].Value
                                             });
 
                 dataGridView2.Rows.Remove(row);
@@ -524,10 +503,8 @@ namespace Conexion_Servidor_Ftp
         private void CrearDataGrid(DataGridView datagrid)
         {
             this.Controls.Add(datagrid);
-//***INI*** MOD 01/03/2018 ***INI***//
-            //datagrid.ColumnCount = 19;
+
             datagrid.ColumnCount = 21;
-//***FIN*** MOD 01/03/2018 ***FIN***//
 
             datagrid.Columns[0].Name = "Nº Pedido";
             datagrid.Columns[1].Name = "Nº Key";
@@ -547,24 +524,15 @@ namespace Conexion_Servidor_Ftp
             datagrid.Columns[15].Name = "Reembolso";
             datagrid.Columns[16].Name = "Retorno";
             datagrid.Columns[17].Name = "Observaciones";
-//***INI*** MOD 01/03/2018 ***INI***//
             datagrid.Columns[18].Name = "Etiquetas";
             datagrid.Columns[19].Name = "Servicio";
-
-//          chk2 = new DataGridViewComboBoxColumn();
-//          datagrid.Columns.Add(chk2);
-//          chk2.HeaderText = "Tipo servicio";
-//          chk2.Name = "Servicio";
-//***FIN*** MOD 01/03/2018 ***FIN***//
-//***INI*** MOD 21/11/2019 ***INI***//
             datagrid.Columns[20].Name = "Mail";
-//***FIN*** MOD 21/11/2019 ***FIN***//
             chk = new DataGridViewCheckBoxColumn();
             datagrid.Columns.Add(chk);
             chk.HeaderText = "Stock";
             chk.Name = "chk";
-       
-            
+
+
         }
 
         /****************************************************************************/
@@ -592,10 +560,8 @@ namespace Conexion_Servidor_Ftp
             comboBox1.Items.Add("Reembolso");
             comboBox1.Items.Add("Retorno");
             comboBox1.Items.Add("Observaciones");
-//***INI*** MOD 01/03/2018 ***INI***//
             comboBox1.Items.Add("Etiquetas");
             comboBox1.Items.Add("Tipo servicio");
-//***FIN*** MOD 01/03/2018 ***FIN***//
 
         }
 
@@ -611,12 +577,8 @@ namespace Conexion_Servidor_Ftp
             con.ConexionBd();
 
             this.dataGridView1.Rows.Clear();
-//***INI*** MOD 01/03/2018 ***INI***//
             foreach (ConectarBD p in con.CargarDatos())
-            //foreach (ConectarBD p in con.PedidosServicios())
-//***FIN*** MOD 01/03/2018 ***FIN***//
             {
-                //int i = 0;
                 if (p.Stock == "SI")
                 {
                     stock = true;
@@ -629,20 +591,9 @@ namespace Conexion_Servidor_Ftp
                 dataGridView1.SelectionMode =
                 DataGridViewSelectionMode.FullRowSelect;
                 dataGridView1.MultiSelect = false;
-//***INI*** MOD 01/03/2018 ***INI***//
-                //dataGridView1.Rows.Add(p.Num_pedido, p.Num_key, p.Proveedor, p.Cod_tarifa, p.Destinatario, p.Id, p.Fecha_pedido, p.Direccion, p.Poblacion,
-                //                       p.Cod_postal, p.Telefono, p.Descripcion_producto, p.Bultos, p.Peso, p.Ref_producto,
-                //                       p.Reembolso, p.Retorno, p.Observaciones, stock);
-                //dataGridView1.Rows.Add(p.Num_pedido, p.Num_key, p.Proveedor, p.Cod_tarifa, p.Destinatario, p.Id, p.Fecha_pedido, p.Direccion, p.Poblacion,
-                //     p.Cod_postal, p.Telefono, p.Descripcion_producto, p.Bultos, p.Peso, p.Ref_producto,
-                //     p.Reembolso, p.Retorno, p.Observaciones, p.Etiqueta, p.Servicio, stock);
-                
-//***FIN*** MOD 01/03/2018 ***FIN***//
-//***INI*** MOD 21/11/2019 ***INI***//
                 dataGridView1.Rows.Add(p.Num_pedido, p.Num_key, p.Proveedor, p.Cod_tarifa, p.Destinatario, p.Id, p.Fecha_pedido, p.Direccion, p.Poblacion,
                                        p.Cod_postal, p.Telefono, p.Descripcion_producto, p.Bultos, p.Peso, p.Ref_producto,
                                        p.Reembolso, p.Retorno, p.Observaciones, p.Etiqueta, p.Servicio, p.Email, stock);
-//***FIN*** MOD 01/03/2018 ***FIN***//
 
 
             }
@@ -659,8 +610,6 @@ namespace Conexion_Servidor_Ftp
         //- Insertamos los datos de los ficheros en una base de datos
         private void LeerFicheros(List<FtpFile> listaFiles, string ruta_fichero)
         {
-            //String folderPath = @"C:\FICHEROS FTP";
-
             foreach (string file in Directory.EnumerateFiles(ruta_fichero, "*.xml"))
             {
                 EnvialiaFileReader envialiaFileReader = new EnvialiaFileReader();
@@ -678,7 +627,7 @@ namespace Conexion_Servidor_Ftp
 
                         List<LineaPedido> lineasPedido = pedido.getLineasPedido();
                         InsertarBd(lineasPedido);
-                        
+
                     }
                 }
             }
@@ -707,28 +656,23 @@ namespace Conexion_Servidor_Ftp
                     {
                         if (val.comprobar_tamaño_campos(l))
                         {
-                            if (l.Nota.Nota.Count > 0)
+
+                            if (l.Nota.Tipo == "COBRO-REEMBOLSO")
                             {
-                                valor_reembolso = l.Nota.Nota[0];
-                                if (l.Nota.Nota.Count > 1)
-                                {
-                                    if (l.Nota.Nota[1].Length >= 100)
-                                    {
-                                        observaciones = l.Nota.Nota[1].Remove(0, 100);
-                                    }
-                                    else
-                                    {
-                                        observaciones = "Fecha de entrega:" + l.Nota.Nota[1];                                        
-                                    }
-                                }
-                                else
-                                {
-                                    observaciones = "";
-                                }
+                                valor_reembolso = l.Nota.Valor;
                             }
                             else
                             {
                                 valor_reembolso = "0";
+                            }
+
+                            if (l.Nota.Tipo == "GENERICO")
+                            {
+                                observaciones = l.Nota.Valor;
+                            }
+                            else
+                            {
+                                observaciones = "0";
                             }
 
                             if (l.Retorno == "0")
@@ -741,43 +685,7 @@ namespace Conexion_Servidor_Ftp
                             }
                             if (con.CargarDatos().Count == 0)
                             {
-//***INI*** MOD 21/11/2019 ***INI***//
-//                                if (l.Bulto.CodigoAgencia == "EN000000001")
-//                                {
-//                                   if (con.ConsultarArtProveedor(l.NumeroPedido, l.NombreProveedor, l.Bulto.CodigoAgencia) == false)
-//                                    {
-//                                        con.InsertarBd(l.NumeroPedido, l.ReferenciaPedido, l.Bulto.Referencia, l.FechaPedido, l.Entrega.Nombre, l.Entrega.Direccion, l.Entrega.Ciudad,
-//                                                    l.Entrega.Cp, l.Entrega.Telefonos[0], l.NombreProveedor, l.Bulto.Descripcion, l.Bulto.Numero, l.ObtenerPeso(l.Bulto.CodigoAgencia), l.Bulto.CodigoAgencia,
-//                                                    valor_reembolso, retorno, observaciones, "NO", l.Bulto.Etiqueta, "24");
-//                                    }
 
-//                                }
-//                                else
-//                                {
-                                    //con.InsertarBd(l.NumeroPedido, l.ReferenciaPedido, l.Bulto.Referencia, l.FechaPedido, l.Entrega.Nombre, l.Entrega.Direccion, l.Entrega.Ciudad,
-                                    //              l.Entrega.Cp, l.Entrega.Telefonos[0], l.NombreProveedor, l.Bulto.Descripcion, l.Bulto.Numero, l.ObtenerPeso(l.Bulto.CodigoAgencia), l.Bulto.CodigoAgencia,
-                                    //            valor_reembolso, retorno, observaciones, "NO");
-//                                    con.InsertarBd(l.NumeroPedido, l.ReferenciaPedido, l.Bulto.Referencia, l.FechaPedido, l.Entrega.Nombre, l.Entrega.Direccion, l.Entrega.Ciudad,
-//                                                    l.Entrega.Cp, l.Entrega.Telefonos[0], l.NombreProveedor, l.Bulto.Descripcion, l.Bulto.Numero, l.ObtenerPeso(l.Bulto.CodigoAgencia), l.Bulto.CodigoAgencia,
-//                                                    valor_reembolso, retorno, observaciones, "NO", l.Bulto.Etiqueta, "24");
-//                                }
-//***FIN*** MOD 01/03/2018 ***FIN***//
-//***INI*** MOD 21/11/2019 ***INI***//
-//                                if (l.Bulto.CodigoAgencia == "EN000000001")
-//                                {
-//                                    if (con.ConsultarArtProveedor(l.NumeroPedido, l.NombreProveedor, l.Bulto.CodigoAgencia) == false)
-//                                    {
-//                                        con.InsertarBd(l.NumeroPedido, l.ReferenciaPedido, l.Bulto.Referencia, l.FechaPedido, l.Entrega.Nombre, l.Entrega.Direccion, l.Entrega.Ciudad,
-//                                                    l.Entrega.Cp, l.Entrega.Telefonos[0], l.NombreProveedor, l.Bulto.Descripcion, l.Bulto.Numero, l.ObtenerPeso(l.Bulto.CodigoAgencia), l.Bulto.CodigoAgencia,
-//                                                    valor_reembolso, retorno, observaciones, "NO", l.Bulto.Etiqueta, "24");
-//                                    }
-
-//                                }
-//                                else
-//                                {
-//                                    con.InsertarBd(l.NumeroPedido, l.ReferenciaPedido, l.Bulto.Referencia, l.FechaPedido, l.Entrega.Nombre, l.Entrega.Direccion, l.Entrega.Ciudad,
-//                                                    l.Entrega.Cp, l.Entrega.Telefonos[0], l.NombreProveedor, l.Bulto.Descripcion, l.Bulto.Numero, l.ObtenerPeso(l.Bulto.CodigoAgencia), l.Bulto.CodigoAgencia,
-//                                                    valor_reembolso, retorno, observaciones, "NO", l.Bulto.Etiqueta, "24");
                                 if (l.Bulto.CodigoAgencia == "EN000000001")
                                 {
                                     if (con.ConsultarArtProveedor(l.NumeroPedido, l.NombreProveedor, l.Bulto.CodigoAgencia) == false)
@@ -794,12 +702,12 @@ namespace Conexion_Servidor_Ftp
                                                     l.Entrega.Cp, l.Entrega.Telefonos[0], l.NombreProveedor, l.Bulto.Descripcion, l.Bulto.Numero, l.ObtenerPeso(l.Bulto.CodigoAgencia), l.Bulto.CodigoAgencia,
                                                     valor_reembolso, retorno, observaciones, "NO", l.Bulto.Etiqueta, "24", l.Entrega.Email);
                                 }
-                                
-//***FIN*** MOD 01/03/2018 ***FIN***//
+
+                                //***FIN*** MOD 01/03/2018 ***FIN***//
                             }
                             else
                             {
-//***INI*** MOD 01/03/2018 ***INI***//
+                                //***INI*** MOD 01/03/2018 ***INI***//
                                 if (l.Bulto.CodigoAgencia == "EN000000001")
                                 {
                                     if (con.ConsultarArtProveedor(l.NumeroPedido, l.NombreProveedor, l.Bulto.CodigoAgencia) == false)
@@ -812,14 +720,10 @@ namespace Conexion_Servidor_Ftp
                                 }
                                 else
                                 {
-                                    //con.InsertarBd(l.NumeroPedido, l.ReferenciaPedido, l.Bulto.Referencia, l.FechaPedido, l.Entrega.Nombre, l.Entrega.Direccion, l.Entrega.Ciudad,
-                                    //              l.Entrega.Cp, l.Entrega.Telefonos[0], l.NombreProveedor, l.Bulto.Descripcion, l.Bulto.Numero, l.ObtenerPeso(l.Bulto.CodigoAgencia), l.Bulto.CodigoAgencia,
-                                    //            valor_reembolso, retorno, observaciones, "NO");
                                     con.InsertarBd(l.NumeroPedido, l.ReferenciaPedido, l.Bulto.Referencia, l.FechaPedido, l.Entrega.Nombre, l.Entrega.Direccion, l.Entrega.Ciudad,
                                                     l.Entrega.Cp, l.Entrega.Telefonos[0], l.NombreProveedor, l.Bulto.Descripcion, l.Bulto.Numero, l.ObtenerPeso(l.Bulto.CodigoAgencia), l.Bulto.CodigoAgencia,
                                                     valor_reembolso, retorno, observaciones, "NO", l.Bulto.Etiqueta, "24", l.Entrega.Email);
                                 }
-//***FIN*** MOD 01/03/2018 ***FIN***//
                             }
                         }
                     }
@@ -831,7 +735,7 @@ namespace Conexion_Servidor_Ftp
                     String msg = "Error al guardar los datos" + "Details:" + '\n' + ex.ToString();
                     MessageBox.Show(msg);
                 }
-            } 
+            }
         }
 
         /****************************************************************************/
@@ -839,7 +743,7 @@ namespace Conexion_Servidor_Ftp
         /********                      MÉTODO - BACKUP                       ********/
         /********                                                            ********/
         /****************************************************************************/
-        private void generar_backup(string directorio_raiz )
+        private void generar_backup(string directorio_raiz)
         {
             DirectoryInfo dir = new DirectoryInfo(directorio_raiz);
             //Crear una nueva subcarpeta en el directorio raiz
@@ -852,7 +756,7 @@ namespace Conexion_Servidor_Ftp
                 //Crear la subcarpeta
                 System.IO.Directory.CreateDirectory(newPath);
 
-                if(!System.IO.File.Exists(newPath2))
+                if (!System.IO.File.Exists(newPath2))
                 {
                     //Crear la subcarpeta
                     System.IO.Directory.CreateDirectory(newPath2);
@@ -900,7 +804,7 @@ namespace Conexion_Servidor_Ftp
             }
         }
 
-         /****************************************************************************/
+        /****************************************************************************/
         /********                                                            ********/
         /********                      MÉTODO - COLOREAR                     ********/
         /********                                                            ********/
@@ -975,8 +879,8 @@ namespace Conexion_Servidor_Ftp
                                                 reembolso.Contains(cadena_busqueda) ||
                                                 retorno.Contains(cadena_busqueda) ||
                                                 observaciones.Contains(cadena_busqueda) ||
-                                                etiquetas.Contains(cadena_busqueda) 
-                                                //stock.Contains(cadena_busqueda)
+                                                etiquetas.Contains(cadena_busqueda)
+                                          //stock.Contains(cadena_busqueda)
                                           select item).ToList<DataGridViewRow>();
 
             foreach (DataGridViewRow row in rows)
@@ -994,7 +898,6 @@ namespace Conexion_Servidor_Ftp
             }
         }
 
-//***INI*** MOD 01/03/2018 ***INI***//
         /****************************************************************************/
         /********                                                            ********/
         /********                  MÉTODO - CARGAR COMBOBOX                  ********/
@@ -1016,18 +919,6 @@ namespace Conexion_Servidor_Ftp
             }
             con.DesconectarBd();
         }
-//***INI*** MOD 01/03/2018 ***INI***//
-            
-        /****************************************************************************/
-        /********                                                            ********/
-        /********                   EVENTO - CELLCLICK                       ********/
-        /********                                                            ********/
-        /****************************************************************************/
-        /* private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.ColumnIndex != -1)
-                label2.Text = dataGridView1.Columns[e.ColumnIndex].HeaderText.ToString();
-        }*/
 
         /****************************************************************************/
         /********                                                            ********/
@@ -1036,24 +927,7 @@ namespace Conexion_Servidor_Ftp
         /****************************************************************************/
         private void textBox1_KeyDown(object sender, KeyEventArgs e)
         {
-            /*if (e.KeyCode == Keys.Enter)
-            {
-                for (int i = 0; i <= dataGridView1.Columns.Count - 1; i++)
-                {
-                    for (int j = 0; j <= dataGridView1.Rows.Count -2; j++)
-                    {
-                        if (dataGridView1.Columns[i].HeaderText == comboBox1.Text)
-                        {
-                            if (dataGridView1.Rows[j].Cells[i].Value.ToString().Replace(" ", "") == textBox1.Text.Replace(" ", ""))
-                            {
-                                dataGridView1.Rows[j].Selected = true;
-                                dataGridView1.CurrentCell = dataGridView1.Rows[j].Cells[i];
-                                break;
-                            }
-                        }
-                    }
-                }                
-            }*/
+
             if (e.KeyCode == Keys.Enter)
             {
                 busqueda_parcial(textBox1.Text);
@@ -1123,7 +997,6 @@ namespace Conexion_Servidor_Ftp
 
         }
 
-//***INI*** MOD 01/03/2018 ***INI***//
         /****************************************************************************/
         /********                                                            ********/
         /********            EVENTO - SELECTED INDEX CHANGED                 ********/
@@ -1163,7 +1036,6 @@ namespace Conexion_Servidor_Ftp
             }
         }
 
-//***INI*** MOD 01/03/2018 ***INI***//
 
 
 

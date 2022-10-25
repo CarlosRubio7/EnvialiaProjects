@@ -12,16 +12,6 @@ using System.Threading.Tasks;
 /********                         FTPHELPER                          ********/
 /********                                                            ********/
 /****************************************************************************/
-//
-//************          MODIFICACIÓN 01/03/2018              ****************/
-//
-// NUEVA VERSIÓN EN LA QUE SE INCLUYEN LOS SIGUIENTES CAMBIOS:
-// 1 - CAMBIAR EL ORDEN DE LAS COLUMNAS AL LISTAR LOS PEDIDOS
-// 2 - INCLUIR UNA COLUMNA CON EL TIPO DE SERVICIO(MODIFICABLE)
-//***INI*** MOD 01/03/2018 ***INI***//
-//***FIN*** MOD 01/03/2018 ***FIN***//
-//
-//************          MODIFICACIÓN 01/03/2018              ****************/
 
 namespace Conexion_Servidor_Ftp
 {
@@ -54,7 +44,7 @@ namespace Conexion_Servidor_Ftp
             request.KeepAlive = true;
             return request;
         }
-        
+
         /// <summary>
         ///MÉTODO QUE OBTIENE LOS FICHEROS DE LA CARPETA DEL FTP
         /// </summary>        
@@ -67,19 +57,21 @@ namespace Conexion_Servidor_Ftp
             using (var responseStream = response.GetResponseStream())
             using (var reader = new StreamReader(responseStream))
             {
-                while(reader.Peek() >= 0)
+                while (reader.Peek() >= 0)
                 {
                     string fileName = reader.ReadLine();
-//***INI*** MOD 01/03/2018 ***INI***//
-                    //if (fileName.Substring(0, 11) != "pedidos/old")
-                    if (fileName.Substring(0, 23) != "pruebapedidos/oldprueba")
-//***FIN*** MOD 01/03/2018 ***FIN***//
+                    if (fileName.Substring(0, 9) != "pedidos/.")
                     {
-                        files.Add(new FtpFile 
+                        if (fileName.Substring(0, 10) != "pedidos/..")
                         {
-                            FileName = fileName.Remove(0, 14)
-                            //FileName = fileName.Remove(0,8)
-                        });
+                            if (fileName.Substring(0, 11) != "pedidos/old")
+                            {
+                                files.Add(new FtpFile
+                                {
+                                    FileName = fileName.Remove(0, 14)
+                                });
+                            }
+                        }
                     }
                 }
                 return files;
@@ -94,9 +86,9 @@ namespace Conexion_Servidor_Ftp
             foreach (var f in lista)
             {
                 var ftpClient = CreateRequest(GetRemoteFilePath(f.FileName));
-                ftpClient.Method = WebRequestMethods.Ftp.DownloadFile;                
+                ftpClient.Method = WebRequestMethods.Ftp.DownloadFile;
                 using (var response = (FtpWebResponse)ftpClient.GetResponse())
-                using (var responseStream = response.GetResponseStream())   
+                using (var responseStream = response.GetResponseStream())
                 using (var reader = new StreamReader(responseStream))
                 {
                     validaciones.comprobar_fichero_duplicado(ruta_fichero, f.FileName);
@@ -106,14 +98,14 @@ namespace Conexion_Servidor_Ftp
                 }
                 writer.Close();
 
-            }        
+            }
         }
 
         /// <summary>
         ///MÉTODO QUE UTILIZAMOS PARA PASAR LOS FICHEROS DESCARGADOS A LOCAL A UNA CARPETA BACKUP EN FTP
         /// </summary>  
         public void WriteFilesBackupFtp(List<FtpFile> lista)
-        {                   
+        {
             foreach (var f in lista)
             {
                 var ftpClient = CreateRequest(GetRemoteFilePath(f.FileName));
@@ -124,10 +116,7 @@ namespace Conexion_Servidor_Ftp
                 /* Specify the Type of FTP Request */
                 ftpClient.Method = WebRequestMethods.Ftp.Rename;
                 /* Rename the File */
-//***FIN*** MOD 01/03/2018 ***FIN***//
-                //ftpClient.RenameTo = "/pedidos/old/" + f.FileName;
-                ftpClient.RenameTo = "/pedidos/old/pruebapedidos/oldprueba" + f.FileName;
-//***FIN*** MOD 01/03/2018 ***FIN***//
+                ftpClient.RenameTo = "/pedidos/old/" + f.FileName;
                 /* Establish Return Communication with the FTP Server */
                 var response = (FtpWebResponse)ftpClient.GetResponse();
                 /* Resource Cleanup */

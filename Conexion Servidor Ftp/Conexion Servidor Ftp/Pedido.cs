@@ -35,8 +35,9 @@ namespace Conexion_Servidor_Ftp
         [XmlElement("entrega")]
         public Entrega Entrega { get; set; }
 
-        [XmlElement("notas")]
-        public Notas Nota { get; set; }
+        [XmlArray("notas")]
+        [XmlArrayItem("nota")]
+        public List<Notas> Notas { get; set; }
 
         public List<LineaPedido> getLineasPedido()
         {
@@ -48,16 +49,16 @@ namespace Conexion_Servidor_Ftp
                 foreach (Producto producto in recogida.Productos)
                 {
                     foreach (Bulto bulto in producto.Bultos)
-                    {     
+                    {
                         if (Retornos.Count == 0)
                         {
-                            lineaPedido = new LineaPedido(Numero, Referencia, Fecha, Entrega, recogida.Proveedor, bulto, Nota, "0");
+                            lineaPedido = new LineaPedido(Numero, Referencia, Fecha, Entrega, recogida.Proveedor, bulto, Notas[0], "0");
 
                             lineasPedido.Add(lineaPedido);
                         }
                         else
                         {
-                            lineaPedido = new LineaPedido(Numero, Referencia, Fecha, Entrega, recogida.Proveedor, bulto, Nota, "1");
+                            lineaPedido = new LineaPedido(Numero, Referencia, Fecha, Entrega, recogida.Proveedor, bulto, Notas[0], "1");
 
                             lineasPedido.Add(lineaPedido);
 
@@ -65,21 +66,6 @@ namespace Conexion_Servidor_Ftp
                     }
                 }
             }
-
-           /* foreach (Retorno retorno in Retornos)
-            {
-                //foreach (Producto producto in retorno.Productos)
-                foreach (Producto producto in rec)
-                {
-                    foreach (Bulto bulto in producto.Bultos)
-                    {
-                        lineaPedido = new LineaPedido(Numero, Referencia, Fecha, Entrega, retorno.Proveedor, bulto, Nota, "1");
-
-                        lineasPedido.Add(lineaPedido);
-                    }
-                }
-            }*/
-
             return lineasPedido;
         }
     }

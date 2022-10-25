@@ -12,13 +12,15 @@ namespace Conexion_Servidor_Ftp
     {
         public Notas()
         {
-            Nota = new List<String>();
+
         }
 
-        [XmlArray("nota")]
-        [XmlArrayItem("valor")]
-        public List<String> Nota { get; set; }
+        [XmlElement("tipo")]
+        public String Tipo { get; set; }
 
+        [XmlElement("valor")]
+        public String Valor { get; set; }
 
     }
 }
+

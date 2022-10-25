@@ -156,9 +156,9 @@ namespace Conexion_Servidor_Ftp
                 if (tb_ruta.Text != "")
                 {
                     //Descargamos los ficheros obtenidos en una carpeta local
-                    //ftphelper.WriteFiles(listaFicheros, tb_ruta.Text);
+                    ftphelper.WriteFiles(listaFicheros, tb_ruta.Text);
                     //Pasamos los ficheros descargados a local a la carpeta de backup del servidor ftp
-                    //ftphelper.WriteFilesBackupFtp(listaFicheros);
+                    ftphelper.WriteFilesBackupFtp(listaFicheros);
                     //Leemos los ficheros de la carpeta y los guardamos en la base de datos
                     this.LeerFicheros(listaFicheros, tb_ruta.Text);
                     //Creamos un directorio Backup para mover los ficheros leidos e insertados en la base de datos

@@ -29,3 +29,14 @@ C:\Users\Usuario\Source\Repos\CarlosRubio7\EnvialiaProjects\Conexion Servidor Ft
 C:\Users\Usuario\Source\Repos\CarlosRubio7\EnvialiaProjects\Conexion Servidor Ftp\Conexion Servidor Ftp\obj\Debug\Conexion Servidor Ftp.csproj.CoreCompileInputs.cache
 C:\Users\Usuario\Source\Repos\CarlosRubio7\EnvialiaProjects\Conexion Servidor Ftp\Conexion Servidor Ftp\obj\Debug\Conexion Servidor Ftp.exe
 C:\Users\Usuario\Source\Repos\CarlosRubio7\EnvialiaProjects\Conexion Servidor Ftp\Conexion Servidor Ftp\obj\Debug\Conexion Servidor Ftp.pdb
+C:\Users\carlo\Source\Repos\CarlosRubio7\EnvialiaProjects\Conexion Servidor Ftp\Conexion Servidor Ftp\obj\Debug\Conexion Servidor Ftp.csproj.AssemblyReference.cache
+C:\Users\carlo\Source\Repos\CarlosRubio7\EnvialiaProjects\Conexion Servidor Ftp\Conexion Servidor Ftp\obj\Debug\Conexion Servidor Ftp.csproj.ResolveComReference.cache
+C:\Users\carlo\Source\Repos\CarlosRubio7\EnvialiaProjects\Conexion Servidor Ftp\Conexion Servidor Ftp\obj\Debug\Conexion_Servidor_Ftp.ImportarBDD.resources
+C:\Users\carlo\Source\Repos\CarlosRubio7\EnvialiaProjects\Conexion Servidor Ftp\Conexion Servidor Ftp\obj\Debug\Conexion_Servidor_Ftp.MenuPedidos.resources
+C:\Users\carlo\Source\Repos\CarlosRubio7\EnvialiaProjects\Conexion Servidor Ftp\Conexion Servidor Ftp\obj\Debug\Conexion_Servidor_Ftp.MenuPrincipal.resources
+C:\Users\carlo\Source\Repos\CarlosRubio7\EnvialiaProjects\Conexion Servidor Ftp\Conexion Servidor Ftp\obj\Debug\Conexion_Servidor_Ftp.Modificar.resources
+C:\Users\carlo\Source\Repos\CarlosRubio7\EnvialiaProjects\Conexion Servidor Ftp\Conexion Servidor Ftp\obj\Debug\Conexion_Servidor_Ftp.Properties.Resources.resources
+C:\Users\carlo\Source\Repos\CarlosRubio7\EnvialiaProjects\Conexion Servidor Ftp\Conexion Servidor Ftp\obj\Debug\Conexion Servidor Ftp.csproj.GenerateResource.cache
+C:\Users\carlo\Source\Repos\CarlosRubio7\EnvialiaProjects\Conexion Servidor Ftp\Conexion Servidor Ftp\obj\Debug\Conexion Servidor Ftp.csproj.CoreCompileInputs.cache
+C:\Users\carlo\Source\Repos\CarlosRubio7\EnvialiaProjects\Conexion Servidor Ftp\Conexion Servidor Ftp\obj\Debug\Conexion Servidor Ftp.exe
+C:\Users\carlo\Source\Repos\CarlosRubio7\EnvialiaProjects\Conexion Servidor Ftp\Conexion Servidor Ftp\obj\Debug\Conexion Servidor Ftp.pdb
