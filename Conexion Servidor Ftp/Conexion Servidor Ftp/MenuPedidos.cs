@@ -17,24 +17,6 @@ using System.Xml.Serialization;
 /********                        MENÚ PEDIDOS                        ********/
 /********                                                            ********/
 /****************************************************************************/
-//
-//************          MODIFICACIÓN 01/03/2018              ****************/
-//
-// NUEVA VERSIÓN EN LA QUE SE INCLUYEN LOS SIGUIENTES CAMBIOS:
-// 1 - CAMBIAR EL ORDEN DE LAS COLUMNAS AL LISTAR LOS PEDIDOS
-// 2 - INCLUIR UNA COLUMNA CON EL TIPO DE SERVICIO(MODIFICABLE)
-//***INI*** MOD 01/03/2018 ***INI***//
-//***FIN*** MOD 01/03/2018 ***FIN***//
-//
-//************          MODIFICACIÓN 01/03/2018              ****************/
-//************          MODIFICACIÓN 21/11/2019              ****************/
-//
-// NUEVA VERSIÓN EN LA QUE SE INCLUYEN LOS SIGUIENTES CAMBIOS:
-// 1 - INCLUIR UNA COLUMNA CON EL MAIL
-//***INI*** MOD 21/11/2019 ***INI***//
-//***FIN*** MOD 21/11/2019 ***FIN***//
-//
-//************          MODIFICACIÓN 21/11/2019              ****************/
 
 namespace Conexion_Servidor_Ftp
 {
@@ -148,9 +130,9 @@ namespace Conexion_Servidor_Ftp
                 if (tb_ruta.Text != "")
                 {
                     //Descargamos los ficheros obtenidos en una carpeta local
-                    //ftphelper.WriteFiles(listaFicheros, tb_ruta.Text);
+                    ftphelper.WriteFiles(listaFicheros, tb_ruta.Text);
                     //Pasamos los ficheros descargados a local a la carpeta de backup del servidor ftp
-                    //ftphelper.WriteFilesBackupFtp(listaFicheros);
+                    ftphelper.WriteFilesBackupFtp(listaFicheros);
                     //Leemos los ficheros de la carpeta y los guardamos en la base de datos
                     this.LeerFicheros(listaFicheros, tb_ruta.Text);
                     //Creamos un directorio Backup para mover los ficheros leidos e insertados en la base de datos
@@ -685,7 +667,6 @@ namespace Conexion_Servidor_Ftp
                             }
                             if (con.CargarDatos().Count == 0)
                             {
-
                                 if (l.Bulto.CodigoAgencia == "EN000000001")
                                 {
                                     if (con.ConsultarArtProveedor(l.NumeroPedido, l.NombreProveedor, l.Bulto.CodigoAgencia) == false)
@@ -703,11 +684,9 @@ namespace Conexion_Servidor_Ftp
                                                     valor_reembolso, retorno, observaciones, "NO", l.Bulto.Etiqueta, "24", l.Entrega.Email);
                                 }
 
-                                //***FIN*** MOD 01/03/2018 ***FIN***//
                             }
                             else
                             {
-                                //***INI*** MOD 01/03/2018 ***INI***//
                                 if (l.Bulto.CodigoAgencia == "EN000000001")
                                 {
                                     if (con.ConsultarArtProveedor(l.NumeroPedido, l.NombreProveedor, l.Bulto.CodigoAgencia) == false)

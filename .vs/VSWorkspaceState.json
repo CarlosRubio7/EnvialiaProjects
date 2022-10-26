@@ -3,7 +3,9 @@
     "",
     "\\Conexion Servidor Ftp",
     "\\Conexion Servidor Ftp (PRUEBA)",
+    "\\Conexion Servidor Ftp\\Conexion Servidor Ftp",
     "\\Uptook"
   ],
+  "SelectedNode": "\\Conexion Servidor Ftp\\Conexion Servidor Ftp\\FtpHelper.cs",
   "PreviewInSolutionExplorer": false
 }
