@@ -101,10 +101,10 @@ namespace Conexion_Servidor_Ftp
         /********                     BOTÓN - CONECTAR                       ********/
         /********                                                            ********/
         /****************************************************************************/
-        /// 1 - Conecto con el servidor ftp
-        /// 2 - Descargo los ficheros a local
-        /// 3 - Leo el contenido de los ficheros
-        /// 4 - Inserto los datos de los ficheros en el data grid
+        /// 1 - Conectar con el servidor ftp
+        /// 2 - Descargar los ficheros a local
+        /// 3 - Leer el contenido de los ficheros
+        /// 4 - Insertar los datos de los ficheros en el data grid
         /// 5 - Refrescar stock
         private void bt_conectar_Click_1(object sender, EventArgs e)
         {
