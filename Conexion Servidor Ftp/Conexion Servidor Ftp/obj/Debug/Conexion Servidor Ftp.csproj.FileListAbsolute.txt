@@ -40,3 +40,11 @@ C:\Users\carlo\Source\Repos\CarlosRubio7\EnvialiaProjects\Conexion Servidor Ftp\
 C:\Users\carlo\Source\Repos\CarlosRubio7\EnvialiaProjects\Conexion Servidor Ftp\Conexion Servidor Ftp\obj\Debug\Conexion Servidor Ftp.csproj.CoreCompileInputs.cache
 C:\Users\carlo\Source\Repos\CarlosRubio7\EnvialiaProjects\Conexion Servidor Ftp\Conexion Servidor Ftp\obj\Debug\Conexion Servidor Ftp.exe
 C:\Users\carlo\Source\Repos\CarlosRubio7\EnvialiaProjects\Conexion Servidor Ftp\Conexion Servidor Ftp\obj\Debug\Conexion Servidor Ftp.pdb
+C:\Users\carlo\Source\Repos\CarlosRubio7\EnvialiaProjects\Conexion Servidor Ftp\Conexion Servidor Ftp\bin\Debug\BddPedidos.sdf
+C:\Users\carlo\Source\Repos\CarlosRubio7\EnvialiaProjects\Conexion Servidor Ftp\Conexion Servidor Ftp\bin\Debug\Conexion Servidor Ftp.exe.config
+C:\Users\carlo\Source\Repos\CarlosRubio7\EnvialiaProjects\Conexion Servidor Ftp\Conexion Servidor Ftp\bin\Debug\Conexion Servidor Ftp.exe.manifest
+C:\Users\carlo\Source\Repos\CarlosRubio7\EnvialiaProjects\Conexion Servidor Ftp\Conexion Servidor Ftp\bin\Debug\Conexion Servidor Ftp.application
+C:\Users\carlo\Source\Repos\CarlosRubio7\EnvialiaProjects\Conexion Servidor Ftp\Conexion Servidor Ftp\bin\Debug\Conexion Servidor Ftp.exe
+C:\Users\carlo\Source\Repos\CarlosRubio7\EnvialiaProjects\Conexion Servidor Ftp\Conexion Servidor Ftp\bin\Debug\Conexion Servidor Ftp.pdb
+C:\Users\carlo\Source\Repos\CarlosRubio7\EnvialiaProjects\Conexion Servidor Ftp\Conexion Servidor Ftp\obj\Debug\Conexion Servidor Ftp.exe.manifest
+C:\Users\carlo\Source\Repos\CarlosRubio7\EnvialiaProjects\Conexion Servidor Ftp\Conexion Servidor Ftp\obj\Debug\Conexion Servidor Ftp.application

@@ -12,24 +12,6 @@ using System.Threading.Tasks;
 /********                          ConectarBD                        ********/
 /********                                                            ********/
 /****************************************************************************/
-//
-//************          MODIFICACIÓN 01/03/2018              ****************/
-//
-// NUEVA VERSIÓN EN LA QUE SE INCLUYEN LOS SIGUIENTES CAMBIOS:
-// 1 - CAMBIAR EL ORDEN DE LAS COLUMNAS AL LISTAR LOS PEDIDOS
-// 2 - INCLUIR UNA COLUMNA CON EL TIPO DE SERVICIO(MODIFICABLE)
-//***INI*** MOD 01/03/2018 ***INI***//
-//***FIN*** MOD 01/03/2018 ***FIN***//
-//
-//************          MODIFICACIÓN 01/03/2018              ****************/
-//************          MODIFICACIÓN 21/11/2019              ****************/
-//
-// NUEVA VERSIÓN EN LA QUE SE INCLUYEN LOS SIGUIENTES CAMBIOS:
-// 1 - INCLUIR UNA COLUMNA CON EL EMAIL
-//***INI*** MOD 21/11/2019 ***INI***//
-//***FIN*** MOD 21/11/2019 ***FIN***//
-//
-//************          MODIFICACIÓN 21/11/2019              ****************/
 
 namespace Conexion_Servidor_Ftp
 {
@@ -55,14 +37,11 @@ namespace Conexion_Servidor_Ftp
         string reembolso;
         string retorno;
         string observaciones;
-//***INI*** MOD 01/03/2018 ***INI***//
         string etiqueta;
         string tipo_servicio;
-//***FIN*** MOD 01/03/2018 ***FIN***//
         string stock;
-//***INI*** MOD 21/11/2019 ***INI***//
         string email;
-//***FIN*** MOD 21/11/2019 ***FIN***//
+
 
         public string Valor
         {
@@ -295,7 +274,7 @@ namespace Conexion_Servidor_Ftp
                 etiqueta = value;
             }
         }
-//***INI*** MOD 01/03/2018 ***INI***//
+
         public string Servicio
         {
             get
@@ -308,30 +287,6 @@ namespace Conexion_Servidor_Ftp
             }
         }
 
-        /*public Servicio _Servicio
-        {
-            get;
-
-            set;
-
-        }
-        
-        public ConectarBD()
-        {
-            this.listaServicios = new List<Servicio>();
-            this._Servicio = new Servicio();
-        }
-        public List<Servicio> listaServicios = new List<Servicio>();
-
-        public class Servicio
-        {
-            public string Tipo_servicio { get; set; }
-        }*/
-
-
-//***FIN*** MOD 01/03/2018 ***FIN***//
-
-//***INI*** MOD 21/11/2019 ***INI***//
         public string Email
         {
             get
@@ -344,13 +299,9 @@ namespace Conexion_Servidor_Ftp
             }
         }
 
-//***FIN*** MOD 21/11/2019 ***FIN***//
-
-
         public void ConexionBd()
         {
             conn = new SqlCeConnection(@"Data Source = |DataDirectory|\BddPedidos.sdf");
-            //conn = new SqlCeConnection(@"Data Source = C:\Users\PC\documents\visual studio 2010\Projects\BddClientes\BddClientes\BdClientes.sdf");
             conn.Open();
         }
 
@@ -362,11 +313,9 @@ namespace Conexion_Servidor_Ftp
         public List<ConectarBD> ConsultarIdBd(string id)
         {
             List<ConectarBD> lista = new List<ConectarBD>();
-            //List<Servicio> listaServicio = new List<Servicio>();
             SqlCeCommand cmd = conn.CreateCommand();
 
             cmd.Parameters.AddWithValue("@id", id);
-            //cmd.CommandText = "SELECT * FROM Pedidos WHERE num_pedido = @num_pedido";
             cmd.CommandText = "SELECT * FROM Pedidos WHERE Id = @id";
 
             SqlCeDataReader lector = cmd.ExecuteReader();
@@ -409,24 +358,7 @@ namespace Conexion_Servidor_Ftp
             }
             return lista;
         }
-//***INI*** MOD 21/11/2019 ***INI***//
-//***INI*** MOD 01/03/2018 ***INI***//
-//        public void InsertarBd( string num_pedido, string num_key, string ref_producto, string fecha_pedido, string destinatario, 
-//                                string direccion, string poblacion, string cod_postal, string telefono, string proveedor, string descripcion_producto,
-//                                string bultos, string peso, string cod_tarifa, string reembolso, string retorno, string observaciones, string stock)
-//       {           
-//            SqlCeCommand cmd = conn.CreateCommand();
-//            cmd.CommandText = "INSERT INTO Pedidos ([num_pedido], [num_key], [ref_producto], [fecha_pedido], [destinatario], [direccion], [poblacion], [cod_postal], [telefono], [proveedor], [descripcion_producto], [bultos], [peso], [cod_tarifa], [reembolso], [retorno], [observaciones], [stock] ) VALUES ('" + num_pedido + "', '" + num_key + "', '" + ref_producto + "', '" + fecha_pedido + "', '" + destinatario + "', '" + direccion + "', '" + poblacion + "', '" + cod_postal + "', '" + telefono + "','" + proveedor + "', '" + descripcion_producto + "', '" + bultos + "', '" + peso + "', '" + cod_tarifa + "', '" + reembolso + "', '" + retorno + "', '" + observaciones + "', '" + stock + "')";
-//            cmd.ExecuteNonQuery();               
-//        }
 
-//        public void UpdateBd(string id, string num_pedido, string num_key, string ref_producto, string destinatario, string direccion, string poblacion, string cod_postal, string telefono, string proveedor,
-//                             string descripcion_producto, string bultos, string peso, string cod_tarifa, string reembolso, string retorno, string observaciones, string stock)
-//        {
-//            SqlCeCommand cmd = conn.CreateCommand();
-//            cmd.CommandText = "UPDATE Pedidos SET ref_producto = '" + ref_producto + "', destinatario = '" + destinatario + "', direccion = '" + direccion + "', poblacion = '" + poblacion + "', cod_postal = '" + cod_postal + "', telefono = '" + telefono + "', proveedor = '" + proveedor + "', descripcion_producto = '" + descripcion_producto + "', bultos = '" + bultos + "', peso = '" + peso +  "', cod_tarifa = '" + cod_tarifa + "', reembolso = '" + reembolso + "', retorno = '" + retorno + "', observaciones = '" + observaciones + "', stock = '" + stock + "' WHERE id = '" + id + "'";
-//            cmd.ExecuteNonQuery();
-//        }
 
         public void InsertarBd(string num_pedido, string num_key, string ref_producto, string fecha_pedido, string destinatario,
                         string direccion, string poblacion, string cod_postal, string telefono, string proveedor, string descripcion_producto,
@@ -443,7 +375,7 @@ namespace Conexion_Servidor_Ftp
                              string tipo_servicio, string email)
         {
             SqlCeCommand cmd = conn.CreateCommand();
-            cmd.CommandText = "UPDATE Pedidos SET ref_producto = '" + ref_producto + "', destinatario = '" + destinatario + "', direccion = '" + direccion + "', poblacion = '" + poblacion + "', cod_postal = '" + cod_postal + "', telefono = '" + telefono + "', proveedor = '" + proveedor + "', descripcion_producto = '" + descripcion_producto + "', bultos = '" + bultos + "', peso = '" + peso + "', cod_tarifa = '" + cod_tarifa + "', reembolso = '" + reembolso + "', retorno = '" + retorno + "', observaciones = '" + observaciones + "', stock = '" + stock + "', etiquetas = '" + etiquetas + "', tipo_servicio = '" + tipo_servicio + "', email = '" + email + "' WHERE id = '" + id + "'";
+            cmd.CommandText = "UPDATE Pedidos SET num_pedido = '" + num_pedido + "',num_key = '" + num_key +"', ref_producto = '" + ref_producto + "', destinatario = '" + destinatario + "', direccion = '" + direccion + "', poblacion = '" + poblacion + "', cod_postal = '" + cod_postal + "', telefono = '" + telefono + "', proveedor = '" + proveedor + "', descripcion_producto = '" + descripcion_producto + "', bultos = '" + bultos + "', peso = '" + peso + "', cod_tarifa = '" + cod_tarifa + "', reembolso = '" + reembolso + "', retorno = '" + retorno + "', observaciones = '" + observaciones + "', etiquetas = '" + etiquetas + "', tipo_servicio = '" + tipo_servicio + "', mail = '" + email + "' WHERE Id = " + id;
             cmd.ExecuteNonQuery();
         }
 
@@ -460,8 +392,6 @@ namespace Conexion_Servidor_Ftp
             cmd.CommandText = "UPDATE Pedidos SET tipo_servicio = '" + tipo_servicio + "', stock = '" + stock + "' WHERE id = '" + id + "'";
             cmd.ExecuteNonQuery();
         }
-//***FIN*** MOD 01/03/2018 ***FIN***//
-//***FIN*** MOD 21/11/2019 ***FIN***//
 
         public void UpdateTipoServicioBd(string id, string tipo_servicio)
         {
@@ -519,9 +449,7 @@ namespace Conexion_Servidor_Ftp
                 datos.Stock = lector[18].ToString();
                 datos.Etiqueta = lector[19].ToString();
                 datos.tipo_servicio = lector[20].ToString();
-//***INI*** MOD 21/11/2019 ***INI***//
                 datos.Email = lector[21].ToString();
-//***FIN*** MOD 21/11/2019 ***FIN***//
 
                 lista.Add(datos);
             }
@@ -533,10 +461,7 @@ namespace Conexion_Servidor_Ftp
         public List<ConectarBD> PedidosServicios()
         {
             List<ConectarBD> lista = new List<ConectarBD>();
-//***INI*** MOD 21/11/2019 ***INI***//
-            //string consulta = "SELECT P.Id, P.num_pedido, P.num_key, P.ref_producto, P.fecha_pedido, P.destinatario, P.direccion, P.poblacion, P.cod_postal, P.telefono, P.proveedor, P.descripcion_producto, P.bultos, P.peso, P.cod_tarifa, P.reembolso, P.retorno, P.observaciones, P.stock, P.etiquetas, S.IdServicios FROM Pedidos P inner join Servicios S on P.tipo_servicio = S.IdServicios Order by P.num_pedido"; string consulta = "SELECT P.Id, P.num_pedido, P.num_key, P.ref_producto, P.fecha_pedido, P.destinatario, P.direccion, P.poblacion, P.cod_postal, P.telefono, P.proveedor, P.descripcion_producto, P.bultos, P.peso, P.cod_tarifa, P.reembolso, P.retorno, P.observaciones, P.stock, P.etiquetas, S.IdServicios FROM Pedidos P inner join Servicios S on P.tipo_servicio = S.IdServicios Order by P.num_pedido";
             string consulta = "SELECT P.Id, P.num_pedido, P.num_key, P.ref_producto, P.fecha_pedido, P.destinatario, P.direccion, P.poblacion, P.cod_postal, P.telefono, P.proveedor, P.descripcion_producto, P.bultos, P.peso, P.cod_tarifa, P.reembolso, P.retorno, P.observaciones, P.stock, P.etiquetas, P.Email, S.IdServicios FROM Pedidos P inner join Servicios S on P.tipo_servicio = S.IdServicios Order by P.num_pedido";
-//***FIN*** MOD 21/11/2019 ***FIN***//            
             SqlCeCommand cmd = conn.CreateCommand();
             cmd.CommandText = consulta;
             SqlCeDataReader lector = cmd.ExecuteReader();
@@ -565,9 +490,7 @@ namespace Conexion_Servidor_Ftp
                 datos.Stock = lector[18].ToString();
                 datos.Etiqueta = lector[19].ToString();
                 datos.tipo_servicio = lector[20].ToString();
-//***INI*** MOD 21/11/2019 ***INI***//
                 datos.Email = lector[21].ToString();
-//***FIN*** MOD 21/11/2019 ***FIN***//
 
                 lista.Add(datos);
             }
@@ -575,14 +498,11 @@ namespace Conexion_Servidor_Ftp
             return lista;
         }
 
-
         public List<ConectarBD> ConsultarIdMax()
         {
             List<ConectarBD> lista = new List<ConectarBD>();
             SqlCeCommand cmd = conn.CreateCommand();
 
-            //cmd.Parameters.AddWithValue("@id", id);
-            //cmd.CommandText = "SELECT * FROM Pedidos WHERE num_pedido = @num_pedido";
             cmd.CommandText = "SELECT MAX(Id) FROM Pedidos";
 
             SqlCeDataReader lector = cmd.ExecuteReader();
@@ -610,10 +530,7 @@ namespace Conexion_Servidor_Ftp
                 datos.Observaciones = lector[17].ToString();
                 datos.Stock = lector[18].ToString();
                 datos.Etiqueta = lector[19].ToString();
-//***INI*** MOD 21/11/2019 ***INI***//
                 datos.Email = lector[20].ToString();
-//***FIN*** MOD 21/11/2019 ***FIN***//
-               // datos.Tipo_servicio = lector[20].ToString();
 
                 lista.Add(datos);
             }
@@ -631,7 +548,6 @@ namespace Conexion_Servidor_Ftp
             cmd.Parameters.AddWithValue("@numero_pedido", numero_pedido);
             cmd.Parameters.AddWithValue("@proveedor", proveedor);
             cmd.Parameters.AddWithValue("@codigo_tarifa", codigo_tarifa);
-            //cmd.CommandText = "SELECT * FROM Pedidos WHERE num_pedido = @num_pedido";
             cmd.CommandText = "SELECT * FROM Pedidos WHERE num_pedido = @numero_pedido AND proveedor = @proveedor AND cod_tarifa = @codigo_tarifa";
 
             SqlCeDataReader lector = cmd.ExecuteReader();

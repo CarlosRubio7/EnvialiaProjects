@@ -43,6 +43,18 @@ namespace Conexion_Servidor_Ftp
         {
             List<LineaPedido> lineasPedido = new List<LineaPedido>();
             LineaPedido lineaPedido = null;
+            Notas n = new Notas();
+
+            if (Notas.Count == 0)
+            {
+                n.Valor = "0";
+                n.Tipo = "";
+            }
+            else
+            {
+                n.Valor = Notas[0].Valor;
+                n.Tipo = Notas[0].Tipo;
+            }
 
             foreach (Recogida recogida in Recogidas)
             {
@@ -52,13 +64,13 @@ namespace Conexion_Servidor_Ftp
                     {
                         if (Retornos.Count == 0)
                         {
-                            lineaPedido = new LineaPedido(Numero, Referencia, Fecha, Entrega, recogida.Proveedor, bulto, Notas[0], "0");
+                            lineaPedido = new LineaPedido(Numero, Referencia, Fecha, Entrega, recogida.Proveedor, bulto, n, "0");
 
                             lineasPedido.Add(lineaPedido);
                         }
                         else
                         {
-                            lineaPedido = new LineaPedido(Numero, Referencia, Fecha, Entrega, recogida.Proveedor, bulto, Notas[0], "1");
+                            lineaPedido = new LineaPedido(Numero, Referencia, Fecha, Entrega, recogida.Proveedor, bulto, n, "1");
 
                             lineasPedido.Add(lineaPedido);
 

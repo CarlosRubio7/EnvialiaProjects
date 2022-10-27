@@ -7,7 +7,7 @@
     <framework targetVersion="4.5" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="Conexion Servidor Ftp.exe.manifest" size="4033">
+    <dependentAssembly dependencyType="install" codebase="Application Files\Conexion Servidor Ftp_1_0_0_17\Conexion Servidor Ftp.exe.manifest" size="4033">
       <assemblyIdentity name="Conexion Servidor Ftp.exe" version="1.0.0.17" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
