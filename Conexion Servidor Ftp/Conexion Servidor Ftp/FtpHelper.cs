@@ -68,7 +68,7 @@ namespace Conexion_Servidor_Ftp
                             {
                                 files.Add(new FtpFile
                                 {
-                                    FileName = fileName.Remove(0, 14)
+                                    FileName = fileName.Remove(0, 8)
                                 });
                             }
                         }
